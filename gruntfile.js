@@ -22,10 +22,15 @@ modernizr: {
         // Based on default settings on http://modernizr.com/download/
         "extra" : {
             "shiv" : true,
-            "printshiv" : false,
+            "printshiv" : true,
             "load" : true,
-            "mq" : false,
-            "cssclasses" : true
+            "mq" : true,
+            "cssclasses" : true,
+            "fontface": true,
+            "history": true,
+            "notification": true,
+            "cssanimations": true,
+            "fullscreen_api":true
         },
 
         // Based on default settings on http://modernizr.com/download/
@@ -42,9 +47,7 @@ modernizr: {
             "hasevents" : true,
             "prefixes" : true,
             "domprefixes" : true,
-            "fontface": true,
-            "history": true,
-            "notification": true
+            "css_mediaqueries": true
         },
 
         // By default, source is uglified before saving
