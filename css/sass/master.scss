@@ -1,4 +1,5 @@
 /* master.scss */
+
 @mixin prefix($property, $value, $prefixes: webkit moz ms o spec) {
     @each $p in $prefixes {
         @if $p == spec {
@@ -9,7 +10,8 @@
         }
     }
 }
-$input_field:            #999;
+
+$input_field:           #999;
 $input_focus:           #559ab9;
 $validation_passed:     #8aba56;
 $validation_failed:     #ba5656;
