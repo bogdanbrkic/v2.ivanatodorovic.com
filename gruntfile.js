@@ -43,7 +43,8 @@ modernizr: {
             "prefixes" : true,
             "domprefixes" : true,
             "fontface": true,
-            "fontface": true,
+            "history": true,
+            "notification": true
         },
 
         // By default, source is uglified before saving
