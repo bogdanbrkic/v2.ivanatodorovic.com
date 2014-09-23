@@ -50,7 +50,8 @@ modernizr: {
             "css_mediaqueries": true,
             "postmessage": true,
             "applicationcache": true,
-            "webworkers": true
+            "webworkers": true,
+            "canvas": true
         },
 
 
