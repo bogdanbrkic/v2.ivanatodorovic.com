@@ -25,12 +25,7 @@ modernizr: {
             "printshiv" : true,
             "load" : true,
             "mq" : true,
-            "cssclasses" : true,
-            "fontface": true,
-            "history": true,
-            "notification": true,
-            "cssanimations": true,
-            "fullscreen_api":true
+            "cssclasses" : true
         },
 
         // Based on default settings on http://modernizr.com/download/
@@ -47,8 +42,22 @@ modernizr: {
             "hasevents" : true,
             "prefixes" : true,
             "domprefixes" : true,
-            "css_mediaqueries": true
+            "fontface": true,
+            "history": true,
+            "notification": true,
+            "cssanimations": true,
+            "fullscreen_api":true,
+            "css_mediaqueries": true,
+            "postmessage": true,
+            "applicationcache": true,
+            "webworkers": true
         },
+
+
+
+
+
+
 
         // By default, source is uglified before saving
         "uglify" : true,
