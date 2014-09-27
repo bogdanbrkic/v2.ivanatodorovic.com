@@ -1,13 +1,16 @@
 /* base.scss */
 
 /*
-
 sm: 'screen and (min-width: 35.5em)', // 568px
 md: 'screen and (min-width: 48em)',   // 768px
 lg: 'screen and (min-width: 64em)',   // 1024px
 xl: 'screen and (min-width: 80em)'    // 1280px
-
 */
+
+// Define your breakpoints
+//$desktop: new-breakpoint(max-width 64em);
+//$tablet: new-breakpoint(max-width 48em);
+//$mobile: new-breakpoint(max-width 35.5em);
 
 /* Font */
 $h1-size:           36px!default; // .alpha
