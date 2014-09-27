@@ -4,6 +4,14 @@
 @import 'utiluty.scss';
 @import 'base.scss';
 @import 'images.scss';
-@import 'grid.scss';
+//@import 'grid.scss';
+//bourbon
+@import "bower_components/bourbon/dist/_bourbon.scss";
+// custom set for grid
+@import "bower_components/neat/app/assets/stylesheets/settings/_grid.scss";
+//neat
+@import "bower_components/neat/app/assets/stylesheets/_neat.scss";
 //
-@import 'print.scss';
+@import "layout.scss";
+// uncomment after work is done / on end
+//@import 'print.scss';

@@ -1,0 +1,11 @@
+div.container {
+  @include outer-container;
+
+  div.parent-element {
+    @include span-columns(8);
+
+    div.element {
+      @include span-columns(6 of 8);
+    }
+  }
+}
