@@ -1,0 +1,28 @@
+/* layout */
+// Define your breakpoints
+//$desktop: new-breakpoint(max-width 64em);
+$tablet: new-breakpoint(max-width 48em);
+$mobile: new-breakpoint(max-width 35.5em);
+
+div.l-content {
+  @include outer-container;
+
+  .row {
+    @include row();
+  }
+
+  div.element-1 {
+    @include span-columns(6);
+  }
+
+  div.element-1-2 {
+
+    @include span-columns(3);
+
+    @include media($mobile) {
+      @include span-columns(6);
+    }
+  }
+
+
+}
