@@ -1,32 +1,14 @@
 /* film cover */
 
-//vars
-$film-cover-everyday-life: "/img/home/everyday-life.jpg";
+//vars$film-cover-everyday-life: "/img/home/everyday-life.jpg";
 $padding-content: em(88) 0 0 em(48);
 //ui
 .film-cover {
+  position: relative;
   background-image: url($film-cover-everyday-life);
-  //background-repeat: no-repeat;
-  //height: em(320);
-  //height: 30%;
-  display: inline-block;
-  width: 100%;
-  //vertical-align: middle;
+  padding-top: 32.653%;  /* 320/980*100 = .. */
   background-size: 100%;
-  background-position: 50% 50%;
   background-repeat: no-repeat;
-  padding: $padding-content;
-
-  @include media($mobile) {
-    //height: em(104);
-    padding: em(24) em(0) em(16) em(16);
-    height: em(112);
-  }
-
-
-//animation
-   -webkit-transition: all 2s ease-out;
-  transition: all 2s ease-out;
 }
 
 .film-cover__title {
@@ -39,6 +21,12 @@ $padding-content: em(88) 0 0 em(48);
   @include media($mobile) {
     //@include span-columns(6);
     font-size     : em(16);
+  }
+
+  @include media($tablet) {
+    //@include span-columns(6);
+    font-size     : em(32);
+    background-color: #edaf8a;
   }
 }
 
@@ -54,6 +42,10 @@ $padding-content: em(88) 0 0 em(48);
     //@include span-columns(6);
     font-size     : em(16);
   }
+
+  @include media($tablet) {
+    font-size     : em(22);
+  }
 }
 
 .film-cover__separator{
@@ -66,4 +58,29 @@ $padding-content: em(88) 0 0 em(48);
     height: em(4);
     margin-bottom: em(4);
   }
+
+  @include media($tablet) {
+    height: em(16);
+    margin-bottom: em(16);
+  }
+
+  //animation
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+
+}
+
+.film-cover__group-content{
+  padding: $padding-content;
+  position: absolute;
+  top:0;
+  left:0;
+
+  @include media($mobile) {
+    padding: em(28) em(0) em(0) em(8);
+  }
+
+  //animation
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
