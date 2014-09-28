@@ -7,15 +7,26 @@ $padding-content: em(88) 0 0 em(48);
 .film-cover {
   background-image: url($film-cover-everyday-life);
   //background-repeat: no-repeat;
-  height: 320px;
+  //height: em(320);
+  //height: 30%;
   display: inline-block;
   width: 100%;
   //vertical-align: middle;
   background-size: 100%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-
   padding: $padding-content;
+
+  @include media($mobile) {
+    //height: em(104);
+    padding: em(24) em(0) em(16) em(16);
+    height: em(112);
+  }
+
+
+//animation
+   -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
 
 .film-cover__title {
@@ -25,12 +36,34 @@ $padding-content: em(88) 0 0 em(48);
   text-rendering: optimizeLegibility;
   color: #fff;
 
+  @include media($mobile) {
+    //@include span-columns(6);
+    font-size     : em(16);
+  }
 }
 
 .film-cover__sub-title {
   font-family   : $header-font-family;  font-size     : em(30);  font-weight   : 300;
-  line-height   : em(30);
+  //line-height   : em(30);
   color: #fff;
   margin        : 0;
   text-rendering: optimizeLegibility;
+  line-height   : 1em;
+
+  @include media($mobile) {
+    //@include span-columns(6);
+    font-size     : em(16);
+  }
+}
+
+.film-cover__separator{
+  width: em(66);
+  height: em(30);
+  margin-bottom: em(30);
+  border-bottom: 1px solid $orange;
+
+  @include media($mobile) {
+    height: em(4);
+    margin-bottom: em(4);
+  }
 }
