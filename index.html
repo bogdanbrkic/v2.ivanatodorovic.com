@@ -13,20 +13,25 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="/favicon.ico" />
   <script src="build/js/modernizr-custom.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
   <link href="build/css/master.css" rel="stylesheet">
 </head>
 
 <body>
   <!--[if lt IE 7]>
-            <p> You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+  <p> You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
   <!-- Content [ -->
   <div class="l-content">
 
     <div class="row">
-      <div class="element-1"><img src="img/home/harlem.jpg"></div>
+      <div class="element-1">
+        <img class="ui__img--100p" src="img/home/harlem.jpg">
+      </div>
     </div>
 
     <div class="row">
@@ -37,43 +42,56 @@
 
     <div class="row">
       <div class="intro-text">
-        <h3>Topic Label</h3>
-        <h2>Intro Text Heading</h2>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta rerum libero iste saepe.</h4>
+        <h1>ABOUT</h1>
+        <h2>DIRECTOR/ SHOOTER & CO-PRODUCER</h2>
         <p>Lorem ipsum dolor sit amet, consectetur consectetur adipisicing elit. Perferendis para mitis eun non ullam atque debitis, illo adipisicing elit. Perferendis para mitis eun non ullam atque debitis, illo. Amet, consectetur adipisicing. <a href="">Read more <span>&#187;</span></a>
         </p>
       </div>
     </div>
 
+    <div class="row">
+      <div class="element-1-3">1/3</div>
+      <div class="element-1-3">1/3</div>
+      <div class="element-1-3">1/3</div>
+    </div>
 
-    <div/>
-    <!-- ] Content -->
+    <div class="row">
+        <div class="film-cover">
+          <h4 class="film-cover__title">WHEN I WAS BOY<br>
+              I WAS A GIRL</h4>
+          <p class="film-cover__sub-title">EVERYONE DESERVES HAPPINESS IN LIFE ...HAPPINESSS.</p>
+        </div>
+    </div>
 
+  </div>
+  <!-- ] Content -->
 
-    <!-- bottom script -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-      window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-    </script>
-    <script src="build/js/base.min.js"></script>
+  <footer class="l__footer">footer 123</footer>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-          function() {
-            (b[l].q = b[l].q || []).push(arguments)
-          });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-      }(window, document, 'script', 'ga'));
-      ga('create', 'UA-XXXXX-X');
-      ga('send', 'pageview');
-    </script>
+  <!-- bottom script -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+  </script>
+  <script src="build/js/base.min.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function(b, o, i, l, e, r) {
+      b.GoogleAnalyticsObject = l;
+      b[l] || (b[l] =
+        function() {
+          (b[l].q = b[l].q || []).push(arguments)
+        });
+      b[l].l = +new Date;
+      e = o.createElement(i);
+      r = o.getElementsByTagName(i)[0];
+      e.src = '//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
 </body>
 
 </html>

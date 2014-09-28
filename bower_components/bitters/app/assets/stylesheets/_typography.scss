@@ -4,7 +4,8 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  line-height: $base-line-height;
+  //line-height: $base-line-height;
+  line-height: em(32);
 }
 
 h1,
@@ -14,9 +15,11 @@ h4,
 h5,
 h6 {
   font-family: $header-font-family;
-  line-height: $header-line-height;
+  //line-height: $header-line-height;
+  line-height: em(30);
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  font-weight: 300;
 }
 
 h1 {
@@ -25,6 +28,7 @@ h1 {
 
 h2 {
   font-size: $h2-font-size;
+  color: $orange;
 }
 
 h3 {

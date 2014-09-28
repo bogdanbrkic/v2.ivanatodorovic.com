@@ -1,5 +1,7 @@
 /* import */
-
+//font
+$h-font-family: "Roboto Condensed";
+$body-font-family: "Roboto";
 //@import 'mixins.scss';
 //@import 'utiluty.scss';
 //@import 'images.scss';
@@ -10,13 +12,14 @@
 //@import "bower_components/neat/app/assets/stylesheets/settings/_grid.scss";
 //@import "bower_components/bitters/app/assets/stylesheets/_grid-settings.scss";
 //@import 'base.scss';
-@import "bower_components/bitters/app/assets/stylesheets/_base.scss"; 
+@import "bower_components/bitters/app/assets/stylesheets/_base.scss";
 //neat
 @import "bower_components/neat/app/assets/stylesheets/_neat.scss";
 //
-
+@import "mq.scss";
 //
 @import "layout.scss";
+@import "film-cover.scss"
 
 // uncomment after work is done / on end
 //@import 'print.scss';

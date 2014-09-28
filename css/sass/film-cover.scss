@@ -1,0 +1,36 @@
+/* film cover */
+
+//vars
+$film-cover-everyday-life: "/img/home/everyday-life.jpg";
+$padding-content: em(88) 0 0 em(48);
+//ui
+.film-cover {
+  background-image: url($film-cover-everyday-life);
+  //background-repeat: no-repeat;
+  height: 320px;
+  display: inline-block;
+  width: 100%;
+  //vertical-align: middle;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  padding: $padding-content;
+}
+
+.film-cover__title {
+  font-family   : $header-font-family;  font-size     : em(50);  font-weight   : 700;
+  line-height   : 1em;
+  margin        : 0;
+  text-rendering: optimizeLegibility;
+  color: #fff;
+
+}
+
+.film-cover__sub-title {
+  font-family   : $header-font-family;  font-size     : em(30);  font-weight   : 300;
+  line-height   : em(30);
+  color: #fff;
+  margin        : 0;
+  text-rendering: optimizeLegibility;
+}

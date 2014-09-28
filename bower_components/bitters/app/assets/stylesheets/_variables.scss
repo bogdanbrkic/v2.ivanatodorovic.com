@@ -1,12 +1,13 @@
 // Typography
-$sans-serif: $helvetica;
-$serif: $georgia;
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family;
+//$sans-serif: $helvetica;
+//$serif: $georgia;
+//$base-font-family: $sans-serif;
+$base-font-family: $body-font-family;
+$header-font-family: $h-font-family;
 
 // Font Sizes
 $base-font-size: 1em;
-$h1-font-size: $base-font-size * 2.25;
+$h1-font-size: $base-font-size * 3.125;
 $h2-font-size: $base-font-size * 2;
 $h3-font-size: $base-font-size * 1.75;
 $h4-font-size: $base-font-size * 1.5;
@@ -30,6 +31,7 @@ $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
+$orange: #ff6633;
 
 // Background Color
 $base-background-color: white;
