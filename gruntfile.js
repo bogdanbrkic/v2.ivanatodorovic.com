@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 
         // Based on default settings on http://modernizr.com/download/
         /*
-          http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-flexboxlegacy-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_resize-dataview_api-dom_dataset-file_api-getusermedia-notification-performance-script_async-script_defer-load
+        http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-flexboxlegacy-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_resize-dataview_api-dom_dataset-file_api-getusermedia-notification-performance-script_async-script_defer-load
         */
 
         "extensibility": {
@@ -147,21 +147,20 @@ module.exports = function(grunt) {
     },
 
 
-
-//*************
-  cacheBust: {
-    files: {
-      src: ['index.html', 'contact.html']
+    //*************
+    cacheBust: {
+      files: {
+        src: ['index.html', 'contact.html']
+      }
     }
-  }
 
 
   });
 
+  grunt.registerTask('all', ['modernizr', 'buildjs', 'buildcss', 'cacheBust']);
+  grunt.registerTask('buildsass', ['buildcss', 'cacheBust']);
 
-  grunt.registerTask('default', ['modernizr', 'cacheBust']);
   grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
   grunt.registerTask('buildjs',   ['concat', 'uglify']);
-
 
 };

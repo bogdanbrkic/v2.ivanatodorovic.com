@@ -17,9 +17,9 @@ $body-font-family: "Roboto";
 @import "bower_components/neat/app/assets/stylesheets/_neat.scss";
 //
 @import "mq.scss";
-//
+@import "typography.scss";
 @import "layout.scss";
-@import "film-cover.scss"
- 
+@import "film-cover.scss";
+
 //uncomment after work is done / on end
-//@import 'print.scss';
+@import 'print.scss';
