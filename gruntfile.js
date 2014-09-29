@@ -147,10 +147,19 @@ module.exports = function(grunt) {
     },
 
 
+
+//*************
+  cacheBust: {
+    files: {
+      src: ['index.html', 'contact.html']
+    }
+  }
+
+
   });
 
 
-  grunt.registerTask('default', ['modernizr']);
+  grunt.registerTask('default', ['modernizr', 'cacheBust']);
   grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
   grunt.registerTask('buildjs',   ['concat', 'uglify']);
 
