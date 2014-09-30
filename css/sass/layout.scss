@@ -1,5 +1,7 @@
 /* layout */
 
+// @TODO srediti m-l__content - uvlacenje kontenta na malim aparatima
+
 /* header */
 
 .l__header{
@@ -45,6 +47,19 @@ body{
     }
   }
 
+  p {
+    @include media($mobile) {
+      font-size: em(16);
+    }
+  }
+
+}
+
+.m-l__content {
+    @include media($mobile) {
+    margin-left: em(12);
+    margin-right: em(12);
+  }
 }
 
 /* footer */
