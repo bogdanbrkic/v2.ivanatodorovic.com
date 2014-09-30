@@ -82,7 +82,6 @@ module.exports = function(grunt) {
     },
 
 
-
     //*************
     cssc: {
       build: {
@@ -152,15 +151,25 @@ module.exports = function(grunt) {
       files: {
         src: ['index.html']
       }
+    },
+
+
+    //************
+    imageoptim: {
+
+      myTask: {
+          src: ['img']
+        }
     }
 
 
   });
 
-  grunt.registerTask('all', ['modernizr', 'buildjs', 'buildcss', 'cacheBust']);
+  grunt.registerTask('all', ['modernizr', 'buildjs', 'buildcss', 'imageoptim' , 'cacheBust']);
   grunt.registerTask('buildsass', ['buildcss', 'cacheBust']);
 
   grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
   grunt.registerTask('buildjs',   ['concat', 'uglify']);
+  grunt.registerTask('buildimgs',  ['imageoptim']);
 
 };

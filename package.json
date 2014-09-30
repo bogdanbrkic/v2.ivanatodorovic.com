@@ -15,6 +15,7 @@
         "grunt-htmlhint":               "*",
         "grunt-modernizr":              "*",
         "grunt-cache-bust":             "*",
+        "grunt-imageoptim":             "*",
         "matchdep":                     "*"
     }
 }
