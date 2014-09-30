@@ -1,9 +1,17 @@
 /* block grid */
 
-.menu{
+.menu {
+  padding-top: em(40);
   @include outer-container;
+  font-family: $menu-font-family;
+  font-size: em(24);
+  font-weight: 300;
 }
+.menu:after{
+    padding-bottom: em(15);
+}
+
 .menu__item{
   float: left;
-  margin-right:1.5em;
+  margin-right:1.125em;
 }

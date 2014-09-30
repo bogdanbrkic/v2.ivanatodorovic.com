@@ -1,10 +1,22 @@
 /* layout */
 
+/* header */
+
+.l__header{
+
+  .p-top {
+      margin-top:em(50);
+  }
+
+}
+
+/* body */
+
 body{
   margin: 0;
 }
 
-div.l__content {
+.l__content {
   @include outer-container;
 
   .row {
@@ -33,8 +45,9 @@ div.l__content {
     }
   }
 
-
 }
+
+/* footer */
 
 .l__footer{
   background-color: #ededed;
