@@ -1,11 +1,25 @@
+/* master include */
+
 //bourbon
 @import "bower_components/bourbon/dist/_bourbon.scss";
+
 //my vars
 @import "vars.scss";
+
 // bitters
 @import "bower_components/bitters/app/assets/stylesheets/_base.scss";
 //neat
 @import "bower_components/neat/app/assets/stylesheets/_neat.scss";
+
+
+//TODO
+// Define your breakpoints
+//$desktop: new-breakpoint(max-width 64em);
+//$tablet: new-breakpoint(max-width 48em);
+$mobile: new-breakpoint(max-width 35.5em);
+$tablet: new-breakpoint(min-width 35.55em) and (max-width 60em);
+
+
 //my scss's
 @import "typography.scss";
 @import "layout.scss";
