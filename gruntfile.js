@@ -3,11 +3,8 @@ module.exports = function(grunt) {
   "use strict";
   require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
-
   grunt.initConfig({
-
     pkg: grunt.file.readJSON('package.json'),
-
 
     //*************
     modernizr: {
@@ -81,7 +78,6 @@ module.exports = function(grunt) {
 
     },
 
-
     //*************
     cssc: {
       build: {
@@ -130,7 +126,6 @@ module.exports = function(grunt) {
       }
     },
 
-
     //*************
     watch: {
 
@@ -145,7 +140,6 @@ module.exports = function(grunt) {
       // }
     },
 
-
     //*************
     cacheBust: {
       files: {
@@ -153,10 +147,8 @@ module.exports = function(grunt) {
       }
     },
 
-
     //************
     imageoptim: {
-
       myTask: {
           src: ['img']
         }
@@ -165,9 +157,11 @@ module.exports = function(grunt) {
 
   });
 
+  //run all
   grunt.registerTask('all', ['modernizr', 'buildjs', 'buildcss', 'imageoptim' , 'cacheBust']);
-  grunt.registerTask('buildsass', ['buildcss', 'cacheBust']);
 
+  //run small tasks:
+  grunt.registerTask('buildsass', ['buildcss', 'cacheBust']);
   grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
   grunt.registerTask('buildjs',   ['concat', 'uglify']);
   grunt.registerTask('buildimgs',  ['imageoptim']);
