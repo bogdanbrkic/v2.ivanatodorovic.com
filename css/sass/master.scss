@@ -24,4 +24,5 @@ $tablet: new-breakpoint(min-width 35.55em) and (max-width 60em);
 @import "typography.scss";
 @import "layout.scss";
 @import "film-cover.scss";
+@import "menu.scss";
 @import 'print.scss'; //uncomment after work is done / on end

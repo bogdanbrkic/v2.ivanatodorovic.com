@@ -1,0 +1,9 @@
+/* block grid */
+
+.menu{
+  @include outer-container;
+}
+.menu__item{
+  float: left;
+  margin-right:1.5em;
+}
