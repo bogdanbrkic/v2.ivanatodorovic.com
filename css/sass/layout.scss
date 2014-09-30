@@ -50,5 +50,13 @@ body{
 /* footer */
 
 .l__footer{
+  margin-top: em(30);
   background-color: #ededed;
+  font-family: $menu-font-family;
+  font-size: em(16);
+  font-weight: 300;
+}
+
+.l__footer--container{
+  @include outer-container;
 }
