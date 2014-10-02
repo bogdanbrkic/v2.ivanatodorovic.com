@@ -40,8 +40,7 @@
   }
 
   //animation
-  -webkit-transition: all 2s ease-out;
-  transition: all 2s ease-out;
+  @include prefixer(transition, '2s ease-out', webkit moz ms o spec);
 }
 
 .film-cover__sub-title {
@@ -62,8 +61,8 @@
   font-size     : 1em;
 }
   //animation
-  -webkit-transition: all 2s ease-out;
-  transition: all 2s ease-out;
+  @include prefixer(transition, '2s ease-out', webkit moz ms o spec);
+
 }
 
 .film-cover__separator{
@@ -82,8 +81,10 @@
   }
 
   //animation
-  -webkit-transition: all 2s ease-out;
-  transition: all 2s ease-out;
+  //transition: all 2s ease-out;
+  @include prefixer(transition, '2s ease-out', webkit moz ms o spec);
+
+
 
 }
 
@@ -94,14 +95,6 @@
   top:0;
   left:0;
 
-  // @include media($tablet) {
-  //   padding: 5em 0em 0em 1em;
-  // }
-
-// @include media($mobile) {
-//   padding: 5em 0em 0em 1em;
-// }
   //animation
-  -webkit-transition: all 2s ease-out;
-  transition: all 2s ease-out;
+  @include prefixer(transition, '2s ease-out', webkit moz ms o spec);
 }
