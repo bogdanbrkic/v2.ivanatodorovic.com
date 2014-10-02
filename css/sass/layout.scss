@@ -1,6 +1,9 @@
 /* layout */
 
-// @TODO srediti m-l__content - uvlacenje kontenta na malim aparatima
+/*
+  @TODO srediti m-l__content - uvlacenje kontenta na malim aparatima
+  - row full 100p i row -5 per margin left i right
+*/
 
 
 /* logo */
@@ -11,7 +14,6 @@
 
 .logo__name {
   width: em(490);
-  height: em (70);
   background-image: url(../../img/svg/it-black.svg);
   background-repeat: no-repeat;
   background-position : left top;
