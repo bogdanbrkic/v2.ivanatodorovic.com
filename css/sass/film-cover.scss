@@ -95,5 +95,6 @@
   left:0;
 
   //animation
-  @include prefixer(transition, '2s ease-out', webkit moz ms o spec);
+  //@include prefixer(transition, '2s ease-out', webkit moz ms o spec);
+  @include transform(padding .3s ease);
 }

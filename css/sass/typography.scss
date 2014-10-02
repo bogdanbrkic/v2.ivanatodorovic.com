@@ -1,10 +1,41 @@
 /* typograhy */
 
-p {
+a {
+  color: $orange;
+}
+
+a:hover {
+  //color: #fff;
+  //background-color: $orange;
+  //padding: 0.5em;
+  // @include animation(a-bg-color 0.5s);
+}
+
+h1 {
+  @include media($mobile) {
+    font-size: em(30);
+  }
+}
+
+h2 {
+  @include media($mobile) {
     font-size: em(20);
-    line-height: em(32);
+  }
+}
+
+p {
+  font-size: em(20);
+  line-height: em(32);
 
   @include media($mobile) {
     font-size: em(16);
   }
 }
+
+
+//
+// Create the keyframes using the mixin
+// @include keyframes(a-bg-color) {
+//   from { background-color: #fff;}
+//     to { background-color: $orange;}
+// }

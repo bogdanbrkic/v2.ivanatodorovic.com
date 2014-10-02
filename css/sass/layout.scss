@@ -15,17 +15,34 @@ body{
 /* logo */
 
 .logo {
-  max-height: em(70);
+  max-height: em(110);
+
+  @include media($mobile){
+    padding-bottom: em(170);
+  }
 }
 
 .logo__name {
-  // width: 50%;
+  width: 50%;
   margin: 0 auto;
+
+  @include media($mobile){
+    width: 100%;
+  }
 }
 
 .logo__title {
   // width: 50%;
   margin: 0 auto;
+  height: em(60);
+  margin-left: -3em;
+
+  @include media($mobile) {
+     margin-left: -0.8em;
+     width: 100%;
+     height: 100%;
+   }
+
 }
 
 /* header */
@@ -34,6 +51,10 @@ body{
 
   .p-top {
     margin-top:em(50);
+
+    @include media($mobile) {
+      margin-top:em(20);
+    }
   }
 
 }
@@ -83,14 +104,6 @@ body{
   }
 
 }
-
-
-// .m-l__content {
-//   @include media($mobile) {
-//     margin-left: em(12);
-//     margin-right: em(12);
-//   }
-// }
 
 /* footer */
 
