@@ -19,15 +19,13 @@ body{
 }
 
 .logo__name {
-  width: em(490);
-  background-image: url(../../img/svg/it-black.svg);
-  background-repeat: no-repeat;
-  background-position : left top;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .logo__title {
-  width: em(260);
-  //background: url(100px-wide-no-height-or-ratio.svg);
+  width: 50%;
+  margin: 0 auto;
 }
 
 /* header */
@@ -40,9 +38,21 @@ body{
 
 }
 
-.l__content {
+/* wrapper */
+.l__wrapper {
   @include outer-container;
-  padding: 0 em(1) 0 em(1);
+  padding: 0em 1em 0em 1em;
+}
+
+.l__wrapper--100p {
+   @include media($mobile) {
+   padding: 0em 0em 0em 0em;
+  }
+}
+
+
+.l__content {
+  padding: 0em 1em 0em 1em;
 
   .row {
     @include row();
