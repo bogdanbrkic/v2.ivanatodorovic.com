@@ -45,7 +45,7 @@ body{
 }
 
 .l__wrapper--100p {
-   @include media($mobile) {
+   @include media($tablet) {
    padding: 0em 0em 0em 0em;
   }
 }
