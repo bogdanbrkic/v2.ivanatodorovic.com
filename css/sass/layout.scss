@@ -42,6 +42,7 @@ body{
 
 .l__content {
   @include outer-container;
+  padding: 0 em(1) 0 em(1);
 
   .row {
     @include row();
@@ -74,12 +75,12 @@ body{
 }
 
 
-.m-l__content {
-  @include media($mobile) {
-    margin-left: em(12);
-    margin-right: em(12);
-  }
-}
+// .m-l__content {
+//   @include media($mobile) {
+//     margin-left: em(12);
+//     margin-right: em(12);
+//   }
+// }
 
 /* footer */
 
