@@ -2,6 +2,26 @@
 
 // @TODO srediti m-l__content - uvlacenje kontenta na malim aparatima
 
+
+/* logo */
+
+.logo {
+  max-height: em(70);
+}
+
+.logo__name {
+  width: em(490);
+  height: em (70);
+  background-image: url(../../img/svg/it-black.svg);
+  background-repeat: no-repeat;
+  background-position : left top;
+}
+
+.logo__title {
+  width: em(260);
+  //background: url(100px-wide-no-height-or-ratio.svg);
+}
+
 /* header */
 
 .l__header{
