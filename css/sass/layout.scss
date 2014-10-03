@@ -18,16 +18,16 @@ body{
   max-height: em(110);
 
   @include media($mobile){
-    padding-bottom: em(170);
+    //padding-bottom: em(170);
   }
 }
 
 .logo__name {
-  width: 50%;
+  //width: 50%;
   margin: 0 auto;
 
   @include media($mobile){
-    width: 100%;
+    //width: 100%;
   }
 }
 
