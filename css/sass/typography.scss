@@ -4,14 +4,13 @@ a {
   color: $orange;
 }
 
-a:hover {
-  //color: #fff;
-  //background-color: $orange;
-  //padding: 0.5em;
-  // @include animation(a-bg-color 0.5s);
-}
+a:hover {}
 
 h1 {
+  //line-height: 1em;
+  margin: 1em 0em 0em 0em;
+  line-height: 1.5em;
+
   @include media($mobile) {
     font-size: em(30);
   }
@@ -25,17 +24,9 @@ h2 {
 
 p {
   font-size: em(20);
-  line-height: em(32);
+  line-height: em(26);
 
   @include media($mobile) {
     font-size: em(16);
   }
 }
-
-
-//
-// Create the keyframes using the mixin
-// @include keyframes(a-bg-color) {
-//   from { background-color: #fff;}
-//     to { background-color: $orange;}
-// }
