@@ -8,7 +8,7 @@
   margin-bottom: 2em;
   @include transition ( all 1.5s ease-in-out );
 
-  @include media($mobile) {
+  @include media($tablet) {
     margin-bottom: 0;
     @include transition ( all 1.5s ease-in-out );
   }
