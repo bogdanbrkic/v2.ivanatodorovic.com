@@ -68,16 +68,23 @@ body{
 
 }
 
+/* padding left & right 1 */
+.p-lr-1 {
+  @include media($tablet) {
+     padding: 0em 1em 0em 1em;
+  }
+}
+
 .row--100p {
    @include media($tablet) {
-     padding: 0em 0em 0em 0em;
+    //  padding: 0em 0em 0em 0em;
   }
 }
 
 .row {
   @include row();
   @include outer-container;
-  padding: 0em 1em 0em 1em;
+  // padding: 0em 0em 0em 0em;
 }
 
 .hp-spacer-top-big {
@@ -113,21 +120,21 @@ div.element-1-3 {
 /* footer */
 
 .l__footer{
-  margin-top: em(50);
+  margin-top: em(20);
   padding-top: em(23);
-  background-color: #ededed;
-  font-family: $font-roboto-condensed;
-  font-size: em(18);
-  font-weight: 100;
+  // font-family: $font-roboto-condensed;
+  //font-size: em(18);
+  //font-weight: 100;
   color: #999;
-  height: em(54);
+  height: em(68);
+  background-color: #ededed;
 
   @include media($tablet) {
     margin-top: em(0);
+    padding: 2em 1em 0em 1em;
   }
 }
 
 .l__footer--container{
   @include outer-container;
-  padding: 0em 1em 0em 1em;
 }
