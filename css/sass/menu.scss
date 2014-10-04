@@ -11,6 +11,14 @@
     padding-top: em(16);
     font-size: em(20);
   }
+
+  a {
+    color: $main-nav-a-color;
+  }
+
+  a:hover{
+    color: $orange;
+  }
 }
 .menu:after{
     padding-bottom: em(15);

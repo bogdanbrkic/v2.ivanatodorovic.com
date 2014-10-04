@@ -143,7 +143,7 @@ module.exports = function(grunt) {
     //*************
     cacheBust: {
       files: {
-        src: ['index.html']
+        src: ['index.html', 'lecturer.htm']
       }
     },
 
