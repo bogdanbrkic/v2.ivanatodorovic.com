@@ -6,6 +6,11 @@
   font-family: $menu-font-family;
   font-size: em(24);
   font-weight: 300;
+
+  @include media($mobile) {
+    padding-top: em(16);
+    font-size: em(20);
+  }
 }
 .menu:after{
     padding-bottom: em(15);
@@ -14,4 +19,13 @@
 .menu__item{
   float: left;
   margin-right:1.125em;
+
+  @include media($mobile) {
+    margin-right:0.55em;
+  }
+
+}
+
+.menu__item--current{
+  color: $orange;
 }

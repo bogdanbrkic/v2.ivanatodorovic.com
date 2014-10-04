@@ -1,16 +1,9 @@
 /* layout */
 
-// @TODO srediti m-l__content - uvlacenje kontenta na malim aparatima
-
-/* header */
-
-.l__header{
-
-  .p-top {
-      margin-top:em(50);
-  }
-
-}
+/*
+@TODO srediti m-l__content - uvlacenje kontenta na malim aparatima
+- row full 100p i row -5 per margin left i right
+*/
 
 /* body */
 
@@ -18,8 +11,73 @@ body{
   margin: 0;
 }
 
-.l__content {
+
+/* logo */
+
+.logo {
+  max-height: em(110);
+
+  @include media($mobile){
+    //padding-bottom: em(170);
+  }
+}
+
+.logo__name {
+  //width: 50%;
+  margin: 0 auto;
+
+  @include media($mobile){
+    //width: 100%;
+  }
+}
+
+.logo__title {
+  // width: 50%;
+  margin: 0 auto;
+  height: em(60);
+  margin-left: -3em;
+
+  @include media($mobile) {
+     margin-left: -0.8em;
+     width: 100%;
+     height: 100%;
+   }
+
+}
+
+/* header */
+
+.l__header{
+
+  .p-top {
+    margin-top:em(50);
+
+    @include media($mobile) {
+      margin-top:em(20);
+    }
+  }
+
+}
+
+/* wrapper */
+.l__wrapper {
   @include outer-container;
+  padding: 0em 1em 0em 1em;
+}
+
+.l__wrapper--100p {
+   @include media($tablet) {
+   padding: 0em 0em 0em 0em;
+  }
+}
+
+.hp-spacer-top-big {
+  margin: 1.5em 0 0 0;
+}
+
+
+.l__content {
+  padding: 0em 1em 0em 1em;
 
   .row {
     @include row();
@@ -29,8 +87,11 @@ body{
     @include span-columns(6);
   }
 
-  div.element-1-2 {
+  div.item-100p {
+    @include span-columns(6);
+  }
 
+  div.element-1-2 {
     @include span-columns(3);
 
     @include media($mobile) {
@@ -39,7 +100,6 @@ body{
   }
 
   div.element-1-3 {
-
     @include span-columns(2);
 
     @include media($mobile) {
@@ -47,21 +107,7 @@ body{
     }
   }
 
-  p {
-    @include media($mobile) {
-      font-size: em(16);
-    }
-  }
-
 }
-
-.m-l__content {
-    @include media($mobile) {
-    margin-left: em(12);
-    margin-right: em(12);
-  }
-}
-
 
 /* footer */
 
