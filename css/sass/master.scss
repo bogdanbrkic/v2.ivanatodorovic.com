@@ -21,8 +21,10 @@ $tablet: new-breakpoint(min-width 35.55em) and (max-width 61.20em); //980px = 61
 
 
 //my scss's
-@import "typography.scss";
+
 @import "layout.scss";
 @import "film-cover.scss";
+@import "video.scss";
 @import "menu.scss";
+@import "typography.scss";
 //@import 'print.scss'; //uncomment after work is done / on end
