@@ -115,11 +115,13 @@
 
           <!-- bottom script -->
           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+          <script src="build/js/base.min.621a9c703e91c9a2.js"></script>
           <script>
-            window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>');
+            //jquery local load
+            window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>');
+            //fitVids
+            $(".video").fitVids(); // @TODO move in grunt uglfy
           </script>
-          <script src="build/js/base.min.ef46d3eae3023074.js"></script>
-
           <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
           <script>
           (function(b, o, i, l, e, r) {

@@ -33,8 +33,7 @@
 
     <div class="row">
       <ul class="menu p-lr-1">
-        <li class="menu__item"><a href="index.html">HOME</a>
-        </li>
+        <li class="menu__item"><a href="index.html">HOME</a></li>
         <li class="menu__item">FILMS</li>
         <li class="menu__item menu__item--current">LECTURER</li>
         <li class="menu__item"><a href="biography.htm">BIO</a></li>
@@ -97,15 +96,13 @@
 
   <!-- bottom script -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="build/js/base.min.ef46d3eae3023074.js"></script>
-  <!-- script src="/bower_components/fitvids/jquery.fitvids.3d3a8c0cfb6264d7.js"></script -->
+  <script src="build/js/base.min.621a9c703e91c9a2.js"></script>
   <script>
-    //window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>');
-
+    //jquery local load
+    window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>');
     //fitVids
     $(".video").fitVids(); // @TODO move in grunt uglfy
   </script>
-
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
     (function(b, o, i, l, e, r) {
