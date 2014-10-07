@@ -88,9 +88,11 @@
 }
 
 .film-cover__group-content{
-  //padding: 5em 0em 0em 1em;
-  padding:8% 0 0 3%;
   position: absolute;
-  top:0;
-  left:0;
+  left: 1em;
+  bottom: 2em;
+
+  @include media($mobile) {
+    bottom: 0.5em;
+  }
 }

@@ -108,12 +108,13 @@ module.exports = function(grunt) {
     },
 
     //*************
+    //JS
     concat: {
       options: {
-        separator: ';',
+        separator: ';', sourceMap: true,
       },
       dist: {
-        src: ['js/plugins.js', 'js/main.js', '/bower_components/fitvids/jquery.fitvids.js'],
+        src: ['js/plugins.js','bower_components/fitvids/jquery.fitvids.js' ,'js/main.js' ],
         dest: 'build/js/base.js',
       },
     },
@@ -159,16 +160,16 @@ module.exports = function(grunt) {
     pagespeed: {
         options: {
           nokey: true,
-          url: "https://developers.google.com"
+          url: "https://developers.google.com"    // @TODO set req data ..
         },
-        prod: {
-          options: {
-            url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
-            locale: "en_GB",
-            strategy: "desktop",
-            threshold: 70
-          }
-        },
+        // prod: {
+        //   options: {
+        //     url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
+        //     locale: "en_GB",
+        //     strategy: "desktop",
+        //     threshold: 70
+        //   }
+        // },
         paths: {
           options: {
             paths: ["/speed/docs/insights/v1/getting_started"],
@@ -189,6 +190,6 @@ module.exports = function(grunt) {
   grunt.registerTask('buildsass', ['buildcss', 'cacheBust']);
   grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
   grunt.registerTask('buildjs',   ['concat', 'uglify']);
-  grunt.registerTask('buildimgs',  ['imageoptim']);
+  grunt.registerTask('buildimgs', ['imageoptim']);
 
 };
