@@ -33,6 +33,7 @@ h4 {
   font-weight: 700;
   font-family: $font-roboto;
   color: #ccc;
+  margin-top: 1em;
 
   @include media($mobile) {
     line-height: em(16);

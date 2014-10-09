@@ -1,0 +1,21 @@
+/* news */
+
+.news {
+
+  img {
+    width:100%;
+  }
+
+  h3 {
+    line-height:1em;
+  }
+
+}
+
+.news__img{
+  background-image: url('http://ivanatodorovic.com/img/news/fotka-radionice.jpg');
+  background-size:cover;
+  background-position: center center;
+  width:100%;
+  height: em(450);
+}

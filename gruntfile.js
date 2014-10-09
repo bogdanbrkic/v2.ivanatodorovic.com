@@ -144,7 +144,7 @@ module.exports = function(grunt) {
     //*************
     cacheBust: {
       files: {
-        src: ['index.html', 'lecturer.htm']
+        src: ['index.html', 'lecturer.htm', 'biography.htm','news.htm']
       }
     },
 
@@ -185,7 +185,6 @@ module.exports = function(grunt) {
 
   //run all
   grunt.registerTask('all', ['modernizr', 'buildjs', 'buildcss', 'imageoptim' , 'cacheBust']);
-
   //run small tasks:
   grunt.registerTask('buildsass', ['buildcss', 'cacheBust']);
   grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
