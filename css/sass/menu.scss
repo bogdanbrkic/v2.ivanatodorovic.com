@@ -4,7 +4,7 @@
   padding-top: em(40);
   @include outer-container;
   font-family: $menu-font-family;
-  font-size: em(24);
+  font-size: em(20);
   font-weight: 300;
 
   @include media($mobile) {
