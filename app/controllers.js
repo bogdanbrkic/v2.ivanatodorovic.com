@@ -10,7 +10,7 @@ angular.module('appTumblr.controllers', ['ngSanitize']).
  //$scope.data = null;
  $scope.data = FetchDataFromServer.getDatafromAPI();
   $scope.posts =  $scope.data;
- // $scope.body = $scope.posts;
+  $scope.body = $scope.posts;
 
 
 console.log($scope.data);
