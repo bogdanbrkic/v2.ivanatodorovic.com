@@ -4,7 +4,7 @@
 *
 */
 
-angular.module('appTumblr', [
+var app = angular.module('appTumblr', [
 	'appTumblr.controllers',
 	'appTumblr.services',
  'ngRoute'
@@ -12,21 +12,23 @@ angular.module('appTumblr', [
 
 config(['$routeProvider',
 	function($routeProvider) {
-		$routeProvider.
-		when('/posts', {
+		$routeProvider.when('/',
+		{
 			templateUrl: 'tumblr-rest-api.php',
 			controller: 'FetchTumblrPostsCtrl'
-		}).
-		when(':text', {
-			templateUrl: 'tumblr-rest-api.php',
-			controller: 'FetchTumblrPostsCtrl'
-		}).
-		when(':photo', {
-			templateUrl: 'tumblr-rest-api.php',
-			controller: 'FetchTumblrPostsCtrl'
-		}).
-		otherwise({
-			redirectTo: '/404'
-		});
+		})
+
+		// .
+		// when(':text', {
+		// 	templateUrl: 'tumblr-rest-api.php',
+		// 	controller: 'FetchTumblrPostsCtrl'
+		// }).
+		// when(':photo', {
+		// 	templateUrl: 'tumblr-rest-api.php',
+		// 	controller: 'FetchTumblrPostsCtrl'
+		// }).
+		// otherwise({
+		// 	redirectTo: '/404'
+		// });
 
 	}]);
