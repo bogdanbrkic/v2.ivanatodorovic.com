@@ -1,14 +1,11 @@
 /* film cover */
 
-.film-cover {
-  position: relative;
-  padding-top: 32.653%;  /* 320/980*100 = .. aspect ratio */
-  background-size: 100%;
+.film-cover {  position: relative;  padding-top: 32.653%;  /* 320/980*100 = .. aspect ratio */  background-size: 100%;
   background-repeat: no-repeat;
   margin-bottom: 2em;
   @include transition ( all 1.5s ease-in-out );
 
-  @include media($tablet) {
+  @include media($mobile) {
     margin-bottom: 0;
     @include transition ( all 1.5s ease-in-out );
   }
@@ -88,11 +85,9 @@
 }
 
 .film-cover__group-content{
+  //padding: 5em 0em 0em 1em;
+  padding:8% 0 0 3%;
   position: absolute;
-  left: 1em;
-  bottom: 2em;
-
-  @include media($mobile) {
-    bottom: 0.5em;
-  }
+  top:0;
+  left:0;
 }
