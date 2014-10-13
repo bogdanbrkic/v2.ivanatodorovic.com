@@ -28,7 +28,7 @@
 </head>
 <body>
  <section class="top-padding-40 row">
-  <div class="large-12 columns">		
+  <div class="large-12 columns">
    <ul class="inline-list main-menu">
     <li><a href="#" title="" class="curent">HOME</a></li>
     <li><a href="#" title="">ABOUT</a></li>
@@ -53,11 +53,11 @@
 
     <article ng-repeat="post in posts">
      <h2>{{$index}}</h2>
-     
+
      <!-- text blog post -->
      <h3>{{post.title}}</h3>
      <div ng-bind-html="post.date"></div>
-     <div ng-bind-html="post.body"></div> 
+     <div ng-bind-html="post.body"></div>
 
      <!-- iterate through phots array and take 500px size of img -->
      <ul class="large-block-grid-3">
@@ -68,7 +68,7 @@
       </li>
 
      </ul>
-    </article> 
+    </article>
 
    </div>
    <!-- ] end json data -->

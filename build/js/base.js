@@ -90,9 +90,5 @@
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
 ;;console.log('am in..');
-console.log('am in.. again ;| ');
-
-//fitVids
-// $(".video__item").fitVids();
 
 //# sourceMappingURL=base.js.map
