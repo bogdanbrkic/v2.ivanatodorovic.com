@@ -9,10 +9,6 @@
  <script src="http://code.angularjs.org/1.2.9/angular-resource.js"></script>
  <script src="http://code.angularjs.org/1.2.6/angular-sanitize.min.js"></script>
 
-
-
-
-
 </head>
 <body>
 
@@ -21,6 +17,7 @@
    <!-- json data [ -->
    <div ng-controller="FetchTumblrPostsCtrl">
 
+  <h1>{{test}}</h1>
 
     <article ng-repeat="post in posts">
 
@@ -48,8 +45,8 @@
 
  </section>
 
-<script type="text/javascript" src="app/app.js"></script>
-<script type="text/javascript" src="app/controllers.js"></script>
-<script type="text/javascript" src="app/services.js"></script>
+<script type="text/html" src="app/app.js"></script> <!-- use type text/html for json return -->
+<script type="text/html" src="app/controllers.js"></script>
+<script type="text/html" src="app/services.js"></script>
 </body>
 </html>
