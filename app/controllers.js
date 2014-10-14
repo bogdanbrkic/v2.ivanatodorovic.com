@@ -8,11 +8,12 @@
 appTumblr.controller('TumblrCtrl', function($scope, FetchDataFromServer) {
   //$scope.data = null;
   console.log('............controllers............');
+  $scope.data = {};
 
-  $scope.data = FetchDataFromServer.getDatafromAPI();
-   //$scope.posts = $scope.data;
+  FetchDataFromServer.getDatafromAPI($scope);
+  //$scope.posts = $scope.data;
   // $scope.body = $scope.posts;
-   console.log($scope);
+   console.dir($scope);
    //$scope.posts = data.response.posts;
 });
 
@@ -22,22 +23,20 @@ appTumblr.controller('TumblrCtrl', function($scope, FetchDataFromServer) {
 /* service */
 appTumblr.factory('FetchDataFromServer', function($http, $q) {
 
-  //console.log('.. Services js Go...................');
-return {
-    getDatafromAPI:function(scope) {
-      console.log('................ Services getDatafromAPI...................');
+  return {
+      getDatafromAPI:function($scope) {
+        console.log('................ Services getDatafromAPI...................');
 
-     $http.get('/tumblr-fetch-blog-data.php').success(function(data, status, headers, config) {
-         console.log(data);
-         //return response.data;
-         $scope.data = data;
-       });
-    }
-};
+       $http.get('/tumblr-fetch-blog-data.php').success(function(data, status, headers, config) {
+           console.log(data);
+           //return response.data;
+           $scope.data = data;
+           return data;
+         });
+      }
+  };
 
 });
-
-
 
 
 //***********
