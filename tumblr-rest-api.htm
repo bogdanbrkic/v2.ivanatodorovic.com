@@ -22,7 +22,10 @@
    <!-- json data [ -->
    <div ng-controller="TumblrCtrl" >
 
-      <h1>{{test}}</h1>
+      <article ng-repeat="post in posts">
+      <!--  <h2>{{$index}}</h2> -->
+       <h3>{{post.title}}</h3>
+     </article>
 
    </div>
    <!-- ] end json data -->
