@@ -9,11 +9,10 @@ appTumblr.controller('TumblrCtrl', function($scope, FetchDataFromServer) {
   //$scope.data = null;
   console.log('............controllers............');
   $scope.data = {};
+  $scope.data = FetchDataFromServer.getDatafromAPI()  ;
+  // console.dir($scope.data);
+  $scope.greeting = 'Hola!';
 
-  FetchDataFromServer.getDatafromAPI.get(function(data){
-    $scope.name = data.name;
-    console.dir($scope);
-  });
     //  console.dir($scope.data);
     //  $scope.posts = $scope.data;
     //  $scope.body = $scope.posts;
@@ -29,25 +28,10 @@ appTumblr.factory('FetchDataFromServer', function($http, $q) {
         console.log('................ Services getDatafromAPI...................');
 
        $http.get('/tumblr-fetch-blog-data.php').success(function(data, status, headers, config) {
-          //  console.log(data);
-           //return response.data;
-           $scope.data = data;
-           return data;
+           console.log(data);
+          return data;
          });
       }
   };
 
 });
-
-
-//***********
- // app.factory('registerService', function ($http) {
- //        return {
- //         getYears:function (scope) {// scopes comes from your controller
- //        $http({method : "GET",url : "interface.php"})
- //        .success(function(data){
- //                scope.data = data;!!!!!!
- //             })
- //             }
- //          }
- //       });
