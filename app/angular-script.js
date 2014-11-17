@@ -1,4 +1,4 @@
-function App($scope, $sce,  $http, $templateCache) {
+function appTumblr($scope, $sce,  $http, $templateCache) {
   $scope.method = 'GET';
   $scope.url = 'fetch-blog-data.php';
 

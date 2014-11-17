@@ -5,7 +5,7 @@
 */
 'use strict';
 
-var appTumblr = angular.module('appTumblr', ['ngRoute']);
+var appTumblr = angular.module('appTumblr', ['ngRoute', 'ngResource']);
 
 
 
