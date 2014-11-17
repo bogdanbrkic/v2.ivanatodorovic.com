@@ -1,35 +1,32 @@
 <!doctype html>
-<html>
+<html ng-app="appTumblr">
 <head>
+  <meta charset="utf-8">
 
- <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-resource.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-sanitize.js"></script>
 
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-route.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-resource.js"></script>
- <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-sanitize.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/controllers.js"></script>
 
- <script src="app/app.js"></script>
- <script src="app/controllers.js"></script>
- <script src="app/services.js"></script>
 
 </head>
-<body ng-app="appTumblr" >
-  <div ng-controller="TumblrCtrl" >
 
+<body >
+  <div ng-controller="TumblrCtrl">
 
+    <!-- json data [ -->
 
-   <!-- json data [ -->
-     <h1>{{greeting}}</h1>
+    <article ng-repeat="post in posts">
+      <h2>{{$index}}</h2>
+      <h3>{{post.title}}</h3>
+      <div>{{post.body}}</div>
+    </article>
 
-      <article ng-repeat="post in posts">
-       <h2>{{$index}}</h2>
-       <h3>{{post.title}}</h3>
-     </article>
-
-   </div>
-   <!-- ] end json data -->
-
+  </div>
+  <!-- ] end json data -->
 
 </body>
 </html>

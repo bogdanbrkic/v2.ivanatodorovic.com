@@ -5,36 +5,29 @@
 'use strict';
 
 /* controler */
-appTumblr.controller('TumblrCtrl', function($scope, FetchDataFromServer) {
-  //$scope.data = null;
-  console.log('............controllers............');
-  $scope.data = {};
-  // FetchDataFromServer.getDatafromAPI()  ;
-  // console.dir($scope.data);
-  $scope.greeting = 'Hola!';
+appTumblr.controller('TumblrCtrl', ['$scope', '$http', function($scope, $http) {
 
-  $scope.data = FetchDataFromServer.getDatafromAPI($scope);
-  // $scope.data = data;
-  console.dir($scope);
+  $http.get('/tumblr-fetch-blog-data.php').success(function(data, status, headers, config) {
+    console.log(data);
+    $scope.status = status;
+    $scope.data = data;
+    $scope.posts = data.response.posts;
+    $scope.body = $sce.trustAsHtml($scope.posts);
+  });
+}]);
 
-    //  console.dir($scope.data);
-    //  $scope.posts = $scope.data;
-    //  $scope.body = $scope.posts;
-    //  $scope.posts = data.response.posts;
-});
 
 /* service */
-appTumblr.factory('FetchDataFromServer', function($http, $q) {
+appTumblr.factory('FetchDataFromServer', ['$http', function($http, $q) {
 
   return {
-      getDatafromAPI:function($scope) {
-        console.log('................ Services getDatafromAPI...................');
-
-       $http.get('/tumblr-fetch-blog-data.php').success(function(data, status, headers, config) {
-          //  console.log(data);
-          return data;
-         });
-      }
+    getDatafromAPI: function($scope) {
+      $http.get('/tumblr-fetch-blog-data.php').success(function(data, status, headers, config) {
+        console.log(data);
+        // $scope.data = data;
+        return data;
+      });
+    }
   };
 
-});
+}]);

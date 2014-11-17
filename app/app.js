@@ -7,10 +7,6 @@
 
 var appTumblr = angular.module('appTumblr', ['ngRoute', 'ngResource']);
 
-
-
-
-
 // appTumblr.config(['$routeProvider',
 // 		function($routeProvider) {
 // 			$routeProvider
