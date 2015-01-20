@@ -2,16 +2,12 @@
 <html ng-app="appTumblr">
 <head>
   <meta charset="utf-8">
-
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-route.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-resource.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-sanitize.js"></script>
-
   <script src="app/app.js"></script>
   <script src="app/controllers.js"></script>
-
-
 </head>
 
 <body >
@@ -19,11 +15,28 @@
 
     <!-- json data [ -->
 
-    <article ng-repeat="post in posts">
-      <h2>{{$index}}</h2>
-      <h3>{{post.title}}</h3>
-      <div>{{post.body}}</div>
+    <article
+      ng-repeat="post in posts"
+      ng-switch="$even"
+      ng-class-even="'even'"
+      ng-class-odd="'odd'"
+    >
+
+      <!-- <h2>{{$index}}</h2> -->
+      <!-- <h3>{{post.tags}}</h3> -->
+      <!-- <div ng-bind-html="post.body"></div> -->
+
+      <div ng-switch-when="true">
+        <h3>{{post.title}}</h3>
+        <div ng-bind-html="post.body" class="one"></div>
+      </div>
+      <div ng-switch-default>
+        <h3>{{post.title}}</h3>
+        <div ng-bind-html="post.body" class="two"></div>
+      </div>
     </article>
+
+
 
   </div>
   <!-- ] end json data -->

@@ -16,18 +16,6 @@ $client = new Tumblr\API\Client(
 	);
 
 // Make API request
-$tmp = $client->getBlogPosts('bogdanbrkic.tumblr.com', array('type' => 'text'));
-
-foreach ($tmp->posts as $item) {
-	echo $item->slug . "\n";
-}
-
-/*
-	get JSON data
-	format :: filter=row | text | html
-*/
-$rest_json = file_get_contents("http://api.tumblr.com/v2/blog/bogdanbrkic.tumblr.com/posts/text?filter=row&api_key=fURuMb8kCwSsIsDOxj7tsfuV9U6zzXRkF07mARqJqIetoJAlt4&notes_info=true");
-$rest_vars = json_decode($rest_json, true);
-print_r($rest_vars);
-
+$blogPosts = $client->getBlogPosts('ivanadocumentaryfilmmaker.tumblr.com', array('tag' => 'news', 'filter' => 'html'));
+echo json_encode($blogPosts);
 ?>

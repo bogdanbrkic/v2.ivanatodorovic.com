@@ -5,7 +5,7 @@
 */
 'use strict';
 
-var appTumblr = angular.module('appTumblr', ['ngRoute', 'ngResource']);
+var appTumblr = angular.module('appTumblr', ['ngRoute', 'ngResource','ngSanitize']);
 
 // appTumblr.config(['$routeProvider',
 // 		function($routeProvider) {
