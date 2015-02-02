@@ -41,6 +41,7 @@
 
 .col-1 {
   @include span-columns(6);
+  @include omega();
 }
 
 .col-1-2 {
