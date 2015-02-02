@@ -362,3 +362,155 @@ function post_class_oddeven() {
 
 		echo $str;
 }
+
+
+
+
+/* AFC */
+// if(function_exists("register_field_group"))
+// {
+// 	register_field_group(array (
+// 		'id' => 'acf_fg_1',
+// 		'title' => 'FG_1',
+// 		'fields' => array (
+// 			array (
+// 				'key' => 'field_54cf7bd6f9565',
+// 				'label' => 'FG_1_img',
+// 				'name' => 'FG_1_img',
+// 				'type' => 'image',
+// 				'save_format' => 'url',
+// 				'preview_size' => 'thumbnail',
+// 				'library' => 'all',
+// 			),
+// 			array (
+// 				'key' => 'field_54cf7c4aaceba',
+// 				'label' => 'FG_1_Title',
+// 				'name' => 'FG_1_title',
+// 				'type' => 'text',
+// 				'required' => 1,
+// 				'default_value' => '',
+// 				'placeholder' => '',
+// 				'prepend' => '',
+// 				'append' => '',
+// 				'formatting' => 'none',
+// 				'maxlength' => '',
+// 			),
+// 			array (
+// 				'key' => 'field_54cf7c7cacebb',
+// 				'label' => 'FG_1_Content',
+// 				'name' => 'FG_1_content',
+// 				'type' => 'textarea',
+// 				'required' => 1,
+// 				'default_value' => '',
+// 				'placeholder' => '',
+// 				'maxlength' => '',
+// 				'rows' => '',
+// 				'formatting' => 'html',
+// 			),
+// 		),
+// 		'location' => array (
+// 			array (
+// 				array (
+// 					'param' => 'post_type',
+// 					'operator' => '==',
+// 					'value' => 'post',
+// 					'order_no' => 0,
+// 					'group_no' => 0,
+// 				),
+// 			),
+// 		),
+// 		'options' => array (
+// 			'position' => 'normal',
+// 			'layout' => 'default',
+// 			'hide_on_screen' => array (
+// 			),
+// 		),
+// 		'menu_order' => 0,
+// 	));
+// }
+
+
+/* afc group 2 */
+// if(function_exists("register_field_group"))
+// {
+// 	register_field_group(array (
+// 		'id' => 'acf_fg_2',
+// 		'title' => 'FG_2',
+// 		'fields' => array (
+// 			array (
+// 				'key' => 'field_54cf8ff4bd46b',
+// 				'label' => 'FG_2__subTitle',
+// 				'name' => 'fg_2__subtitle',
+// 				'type' => 'text',
+// 				'default_value' => '',
+// 				'placeholder' => '',
+// 				'prepend' => '',
+// 				'append' => '',
+// 				'formatting' => 'html',
+// 				'maxlength' => '',
+// 			),
+// 			array (
+// 				'key' => 'field_54cf87e4b7461',
+// 				'label' => 'FG_2__img',
+// 				'name' => 'fg_2__img',
+// 				'type' => 'image',
+// 				'save_format' => 'url',
+// 				'preview_size' => 'full',
+// 				'library' => 'all',
+// 			),
+// 			array (
+// 				'key' => 'field_54cf900bbd46c',
+// 				'label' => 'FG_2__taxonomy',
+// 				'name' => 'fg_2__taxonomy',
+// 				'type' => 'taxonomy',
+// 				'taxonomy' => 'category',
+// 				'field_type' => 'checkbox',
+// 				'allow_null' => 0,
+// 				'load_save_terms' => 0,
+// 				'return_format' => 'id',
+// 				'multiple' => 0,
+// 			),
+// 			array (
+// 				'key' => 'field_54cf87bcb7460',
+// 				'label' => 'FG_2__content',
+// 				'name' => 'fg_2__content',
+// 				'type' => 'textarea',
+// 				'default_value' => '',
+// 				'placeholder' => '',
+// 				'maxlength' => '',
+// 				'rows' => '',
+// 				'formatting' => 'br',
+// 			),
+// 			array (
+// 				'key' => 'field_54cf9038bd46d',
+// 				'label' => '',
+// 				'name' => '',
+// 				'type' => 'text',
+// 				'default_value' => '',
+// 				'placeholder' => '',
+// 				'prepend' => '',
+// 				'append' => '',
+// 				'formatting' => 'html',
+// 				'maxlength' => '',
+// 			),
+// 		),
+// 		'location' => array (
+// 			array (
+// 				array (
+// 					'param' => 'post_type',
+// 					'operator' => '==',
+// 					'value' => 'post',
+// 					'order_no' => 0,
+// 					'group_no' => 0,
+// 				),
+// 			),
+// 		),
+// 		'options' => array (
+// 			'position' => 'normal',
+// 			'layout' => 'no_box',
+// 			'hide_on_screen' => array (
+// 			),
+// 		),
+// 		'menu_order' => 0,
+// 	));
+// }

@@ -52,6 +52,13 @@
 			get_template_part( 'author-bio' );
 		endif;
 	?>
+
+	<!-- AFC ield value -->
+	<img src="<?php the_field('FG_1_img'); ?>" />
+	<h2><?php the_field('FG_1_title'); ?></h2>
+	<div><?php the_field('FG_1_content'); ?></div>
+
+
 	<!-- CF_video : render custom field value -->
 	<?php echo get_post_meta($post->ID, "CF_video", true); ?>
 </div>
