@@ -54,7 +54,7 @@
 	?>
 
 	<!-- AFC ield value -->
-	<img src="<?php the_field('FG_1_img'); ?>" />
+	<img src="<?php the_field('FG_news_img'); ?>" />
 	<h2><?php the_field('FG_1_title'); ?></h2>
 	<div><?php the_field('FG_1_content'); ?></div>
 

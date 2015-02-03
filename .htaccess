@@ -549,3 +549,16 @@ FileETag None
 # <IfModule mod_headers.c>
 #    Header set Connection Keep-Alive
 # </IfModule>
+
+# ------------------------------------------------------------------------------
+# | WP rewrite rule                                                 |
+# ------------------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /wordpress/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /wordpress/index.php [L]
+</IfModule>
