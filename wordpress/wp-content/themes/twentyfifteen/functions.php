@@ -366,7 +366,7 @@ function post_class_oddeven() {
 
 /* paginatio n Fn() */
 
-function custom_pagination($pages = '', $range = 2)
+function custom_pagination($pages = '', $range = 2, $cssClassName = 'pagination')
 {
 		$showitems = ($range * 2)+1;
 
@@ -387,7 +387,7 @@ function custom_pagination($pages = '', $range = 2)
 
 		if(1 != $pages)
 		{
-				echo "<div class='pagination'>";
+				echo "<div class=\"$cssClassName\">";
 				if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo;</a>";
 				if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo;</a>";
 

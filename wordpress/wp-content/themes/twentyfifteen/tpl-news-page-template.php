@@ -9,7 +9,7 @@
 
 <style>
 
-/* move into sass and style-it */
+/* move into sass and style-it and set in the middle .. like on power nap site .. */
 
 .pagination {
 clear:both;
@@ -17,6 +17,9 @@ padding:20px 0;
 position:relative;
 font-size:11px;
 line-height:13px;
+
+width: 100%;
+left: 50%;
 }
 
 .pagination span, .pagination a {
@@ -49,7 +52,7 @@ color:#fff;
 /*
 * list posts from cat == news (2)
 */
-$additional_loop = new WP_Query("posts_per_page=4&cat=2&paged=$paged");
+$additional_loop = new WP_Query("posts_per_page=1&cat=2&paged=$paged");
 
 // debug
 // print_r($additional_loop);
@@ -75,8 +78,10 @@ $additional_loop = new WP_Query("posts_per_page=4&cat=2&paged=$paged");
 
 <?php endwhile; // end of the loop. ?>
 
+<div class="text--center row">
 <!-- render pagination  -->
-<?php custom_pagination($additional_loop->max_num_pages, $range = 2); ?>
+<?php custom_pagination($additional_loop->max_num_pages, $range = 2, $cssClassName="pagination"); ?>
+</div>
 
 <!-- footer  -->
 <?php get_footer(); ?>
