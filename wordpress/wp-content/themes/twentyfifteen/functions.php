@@ -366,7 +366,7 @@ function post_class_oddeven() {
 
 /* paginatio n Fn() */
 
-function kriesi_pagination($pages = '', $range = 2)
+function custom_pagination($pages = '', $range = 2)
 {
 		$showitems = ($range * 2)+1;
 

@@ -7,6 +7,42 @@
 	<h1>NEWS</h1>
 </div>
 
+<style>
+
+/* move into sass and style-it */
+
+.pagination {
+clear:both;
+padding:20px 0;
+position:relative;
+font-size:11px;
+line-height:13px;
+}
+
+.pagination span, .pagination a {
+display:block;
+float:left;
+margin: 2px 2px 2px 0;
+padding:6px 9px 5px 9px;
+text-decoration:none;
+width:auto;
+color:#fff;
+background: #555;
+}
+
+.pagination a:hover{
+color:#fff;
+background: #3279BB;
+}
+
+.pagination .current{
+padding:6px 9px 5px 9px;
+background: #3279BB;
+color:#fff;
+}
+
+</style>
+
 <!-- content  -->
 
 <?php
@@ -40,7 +76,7 @@ $additional_loop = new WP_Query("posts_per_page=4&cat=2&paged=$paged");
 <?php endwhile; // end of the loop. ?>
 
 <!-- render pagination  -->
-<?php kriesi_pagination($additional_loop->max_num_pages); ?>
+<?php custom_pagination($additional_loop->max_num_pages, $range = 2); ?>
 
 <!-- footer  -->
 <?php get_footer(); ?>
