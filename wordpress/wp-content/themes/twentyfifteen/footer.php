@@ -10,9 +10,16 @@
  */
 ?>
 
-	</div><!-- .site-content -->
+<!-- Footer [ -->
+<footer class="l__footer">
+	<div class="l__footer--container ">© 2014. All rights reserved.</div>
+</footer>
+<!-- ] Footer -->
 
-</div><!-- .site -->
+
+	<!-- </div><!-- .site-content -->
+
+<!-- </div><!-- .site -->
 
 <?php wp_footer(); ?>
 

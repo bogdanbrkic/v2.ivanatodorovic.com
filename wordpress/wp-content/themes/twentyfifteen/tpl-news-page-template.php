@@ -13,34 +13,45 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<? //php the_content(); | php post_class_oddeven(); ?>
 
-
-
 					<?php
-
-					$args = array( 'posts_per_page' => 5, 'category_name' => 'news' ); //list only post from cat = news
+					/*
+					 * list posts from cat == news
+					*/
+					// $page = (get_query_var('page')) ? get_query_var('page') : 1;
+					$args = array( 'posts_per_page' => 2, 'category_name' => 'news', 'page' => $page);
 					$myposts = get_posts( $args );
+
+					// debug
+					// print_r($args);
+					// print_r($myposts);
+					next_posts_link( 'Older Entries', $loop->max_num_pages );
+					previous_posts_link( 'Newer Entries' );
 
 					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
 					<div class="news news__item">
 							<div class="col-1-2 news__img"><img src="<?php the_field('fg_news_img'); ?>" /></div>
 							<div class="col-1-2 news__txt p-lr-1">
-								<h3 class="news__txt-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<h3 class="news__txt-title"><?php the_title(); ?></h3>
 								<p class="news__txt-p"><?php the_content(); ?></p>
 							</div>
 							</div>
 								<!-- spacer -->
-								<div class="news__item"><div class="news__spacer">&nbsp;</div>
+								<div class="news__item"><div class="news__spacer">&nbsp;</div></div>
+
+
 
 
 					<?php endforeach;
-
-					wp_reset_postdata();
+								wp_reset_postdata();
 					?>
 
 
 		<?php endwhile; // end of the loop. ?>
 
+		<div id="pagination">
+			<?php wp_pagenavi( array( 'type' => 'multipart' ) ); ?>
+		</div>
 
 <!-- footer  -->
 <?php get_footer(); ?>
