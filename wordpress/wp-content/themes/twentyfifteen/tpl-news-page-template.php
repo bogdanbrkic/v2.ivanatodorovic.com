@@ -17,15 +17,13 @@
 					/*
 					 * list posts from cat == news
 					*/
-					// $page = (get_query_var('page')) ? get_query_var('page') : 1;
-					$args = array( 'posts_per_page' => 2, 'category_name' => 'news', 'page' => $page);
+					// $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+					$args = array( 'posts_per_page' => 3, 'category_name' => 'news','orderby' => 'post_date', 'offset'=> 0, 'post_status' => 'publish' , 'page' => $page);
 					$myposts = get_posts( $args );
 
 					// debug
 					// print_r($args);
 					// print_r($myposts);
-					next_posts_link( 'Older Entries', $loop->max_num_pages );
-					previous_posts_link( 'Newer Entries' );
 
 					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
@@ -50,7 +48,7 @@
 		<?php endwhile; // end of the loop. ?>
 
 		<div id="pagination">
-			<?php wp_pagenavi( array( 'type' => 'multipart' ) ); ?>
+			<?php wp_pagenavi(); ?>
 		</div>
 
 <!-- footer  -->

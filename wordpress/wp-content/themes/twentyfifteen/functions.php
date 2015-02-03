@@ -363,8 +363,6 @@ function post_class_oddeven() {
 		echo $str;
 }
 
-
-
 /* AFC */
 // if(function_exists("register_field_group"))
 // {
