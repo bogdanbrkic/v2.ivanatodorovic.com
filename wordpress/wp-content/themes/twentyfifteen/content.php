@@ -54,7 +54,7 @@
 	?>
 
 	<!-- AFC ield value -->
-	<img src="<?php the_field('FG_news_img'); ?>" />
+	<img src="<?php the_field('fg_news_img'); ?>" />
 	<h2><?php the_field('FG_1_title'); ?></h2>
 	<div><?php the_field('FG_1_content'); ?></div>
 
@@ -62,6 +62,8 @@
 	<!-- CF_video : render custom field value -->
 	<?php echo get_post_meta($post->ID, "CF_video", true); ?>
 </div>
+
+<div><< BACK to all news</div>
 
 	<footer class="entry-footer">
 		<? //php twentyfifteen_entry_meta(); ?>

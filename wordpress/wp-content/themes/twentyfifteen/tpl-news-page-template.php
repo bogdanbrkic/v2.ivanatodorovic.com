@@ -18,7 +18,7 @@ position:relative;
 font-size:11px;
 line-height:13px;
 
-width: 100%;
+width: 50%;
 left: 50%;
 }
 
@@ -52,7 +52,7 @@ color:#fff;
 /*
 * list posts from cat == news (2)
 */
-$additional_loop = new WP_Query("posts_per_page=1&cat=2&paged=$paged");
+$additional_loop = new WP_Query("posts_per_page=2&cat=2&paged=$paged");
 
 // debug
 // print_r($additional_loop);
@@ -63,7 +63,7 @@ $additional_loop = new WP_Query("posts_per_page=1&cat=2&paged=$paged");
 	<div class="news news__item">
 		<div class="col-1-2 news__img"><img src="<?php the_field('fg_news_img'); ?>" /></div>
 		<div class="col-1-2 news__txt p-lr-1">
-			<h3 class="news__txt-title"><?php the_title() ?></h3>
+			<h3 class="news__txt-title"><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h3>
 			<p class="news__txt-p"><?php the_content(); ?></p>
 		</div>
 	</div>

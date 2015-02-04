@@ -1,0 +1,40 @@
+<html>
+<head>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+<script>
+jQuery(document).ready(function($) {
+    console.log('api in.....');
+
+    $.ajax({
+      type: 'GET',
+      cache: true,
+      url: 'http://v2.ivanatodorovic.com:5015/wp-json/posts?filter[category_name]=news',
+      dataType: 'json',
+      success: function(posts) {
+        console.log('api exec succ....');
+        // console.log(posts);
+
+        var html = '<ul>';
+        $.each( posts, function(index, post ) {
+          console.log('     __ ' + post.title + ' ---- ' + post.sticky);
+          // if(post.sticky){
+            html += '<li><a href="' + post.link + '">' + post.title + '</a></li>';
+          // }
+        });
+        html += '</ul>';
+        $('#article').append( html);
+      }
+    });
+});
+</script>
+
+</head>
+<body>
+  <h2>statis html - api result + js tpl</h2>
+<div id="article"></div>
+
+
+</body>
+</html>

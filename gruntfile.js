@@ -114,7 +114,11 @@ module.exports = function(grunt) {
         separator: ';', sourceMap: true,
       },
       dist: {
-        src: ['js/plugins.js','bower_components/fitvids/jquery.fitvids.js' ,'js/main.js' ],
+        src: [
+        'js/plugins.js',
+        'bower_components/fitvids/jquery.fitvids.js' ,
+        'bower_components/underscore/underscore.js',
+        'js/main.js' ],
         dest: 'build/js/base.js',
       },
     },
