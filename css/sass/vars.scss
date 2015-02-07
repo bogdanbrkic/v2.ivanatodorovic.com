@@ -17,7 +17,7 @@ $main-nav-a-color-hover: $orange;
 //@import "bower_components/neat/app/assets/stylesheets/_neat-helpers.scss";
 // Neat Overrides
 // $column: 90px;
-// $gutter: 30px;
+$gutter: em(20); // gutter col1 || col2
 $grid-columns: 6;
 $max-width: em(980);
 
