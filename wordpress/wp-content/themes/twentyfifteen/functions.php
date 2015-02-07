@@ -404,3 +404,5 @@ function custom_pagination($pages = '', $range = 2, $cssClassName = 'pagination'
 				echo "</div>\n";
 		}
 }
+
+/*  */
