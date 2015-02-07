@@ -29,20 +29,24 @@ jQuery(document).ready(function($) {
         */
 
         var html = '';
-        $.each( posts, function(index, post ) {
-          // console.log('     __ ' + post.title);
-           if(post.meta.fg_news_showonhp){
-            html += '<div>';
-            html +=  '<img src="'+ post.meta.fg_news_img +'"/>';
-            html += '<a href="' + post.link + '"><h2>' + post.title + '</h2></a>';
-            html += '<h3>' + post.meta.fg_news_showonhp_what + '</h3>';
-            html += '<h2>' + post.meta.fg_news_showonhp_title + '</h2>';
-            html += '<p>'+ post.meta.fg_news_showonhp_desc +'</p>';
-            html += '</div>';
-            html += '<div style="clear: boath;"></div>';
-           }
-        });
-        html += '';
+        var elFound = false;
+
+        // $.each( posts, function(i, post ) {
+        for(var i = 0, l = posts.length; i < l; ++i){
+           if(posts[i].meta.fg_news_showonhp){ // if true
+              // var elFound = true;
+              html += '<div>';
+              html +=  '<img src="'+ posts[i].meta.fg_news_img +'"/>';
+              html += '<a href="' + posts[i].link + '"><h2>' + posts[i].meta.fg_news_showonhp_title + '</h2></a>';
+              html += '<h3>' + posts[i].meta.fg_news_showonhp_what + '</h3>';
+              html += '<p>'+ posts[i].meta.fg_news_showonhp_desc +'</p>';
+              html += '</div>';
+              html += '<div style="clear: boath;"></div>';
+              break; // exit loop
+            }
+        }
+        // });
+
         $('#hp-news').append( html);
       }
     });
@@ -51,9 +55,8 @@ jQuery(document).ready(function($) {
 
 </head>
 <body>
-  <h2>statis html - api result + js tpl</h2>
-<div id="hp-news"></div>
-
+  <h2>static html - api result + js tpl</h2>
+  <div id="hp-news" class="row"></div>
 
 </body>
 </html>
