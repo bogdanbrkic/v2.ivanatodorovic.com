@@ -58,6 +58,7 @@ $additional_loop = new WP_Query("posts_per_page=2&cat=2&paged=$paged");
 // print_r($additional_loop);
 ?>
 
+<!-- loop array and set 1 2 3 with diff tpls .. and loop .. for loop .. i count == 3 reset counter and lop again ..   -->
 <?php while ($additional_loop->have_posts()) : $additional_loop->the_post(); ?>
 
 	<div class="news news__item">
