@@ -98,7 +98,10 @@ $additional_loop = new WP_Query("posts_per_page=4&cat=2&paged=$paged");
 			<div class="col-1-2 news__img"><img src="<?php the_field('fg_news_img'); ?>" /></div>
 		</div>
 
-	<?php } // if i eq 3 ?>
+	<?php
+		$i=0;
+		} // if i eq 3
+	?>
 
 	<!-- spacer -->
 	<div class="news__item"><div class="news__spacer">&nbsp;</div></div>
