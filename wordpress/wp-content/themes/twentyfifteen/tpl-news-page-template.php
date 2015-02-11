@@ -52,14 +52,31 @@ color:#fff;
 /*
 * list posts from cat == news (2)
 */
-$additional_loop = new WP_Query("posts_per_page=2&cat=2&paged=$paged");
+$additional_loop = new WP_Query("posts_per_page=4&cat=2&paged=$paged");
 
 // debug
 // print_r($additional_loop);
 ?>
 
 <!-- loop array and set 1 2 3 with diff tpls .. and loop .. for loop .. i count == 3 reset counter and lop again ..   -->
-<?php while ($additional_loop->have_posts()) : $additional_loop->the_post(); ?>
+<?php
+	$i = 0; // counter
+	while ($additional_loop->have_posts()) : $additional_loop->the_post();
+	$i++;
+	if ($i == 1) {
+?>
+
+	<div class="news news__item">
+			<div class="col-1 news__img"><img src="<?php the_field('fg_news_img'); ?>"/></div>
+			<div class="col-1 news__txt p-lr-1">
+				<h3 class="news__txt-title"><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h3>
+				<p class="news__txt-p"><?php the_content(); ?></p>
+			</div>
+		</div>
+
+	<?php } // if i eq 1
+	if ($i == 2) {
+	?>
 
 	<div class="news news__item">
 		<div class="col-1-2 news__img"><img src="<?php the_field('fg_news_img'); ?>" /></div>
@@ -69,11 +86,22 @@ $additional_loop = new WP_Query("posts_per_page=2&cat=2&paged=$paged");
 		</div>
 	</div>
 
+	<?php } // if i eq 2
+	if ($i == 3) {
+	?>
+
+	<div class="news news__item">
+			<div class="col-1-2 news__txt p-lr-1">
+				<h3 class="news__txt-title"><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h3>
+				<p class="news__txt-p"><?php the_content(); ?></p>
+			</div>
+			<div class="col-1-2 news__img"><img src="<?php the_field('fg_news_img'); ?>" /></div>
+		</div>
+
+	<?php } // if i eq 3 ?>
+
 	<!-- spacer -->
 	<div class="news__item"><div class="news__spacer">&nbsp;</div></div>
-
-
-
 
 	<?php wp_reset_postdata(); // Restore original Post Data ?>
 
