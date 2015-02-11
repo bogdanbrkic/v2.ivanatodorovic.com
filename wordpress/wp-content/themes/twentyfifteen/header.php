@@ -24,7 +24,7 @@
 	<!--  -->
 	<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
-	<link href="//v2.ivanatodorovic.com:5035/build/css/master.css" rel="stylesheet">
+	<link href="//v2.ivanatodorovic.com:5015/build/css/master.css" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>

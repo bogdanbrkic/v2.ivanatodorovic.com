@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
     $.ajax({
       type: 'GET',
       cache: true,
-      url: 'http://v2.ivanatodorovic.com:5035/wp-json/posts?filter[category_name]=news&filter[orderby]=modified', // get all news + ord by modified date + show on hp flag
+      url: 'http://v2.ivanatodorovic.com:5015/wp-json/posts?filter[category_name]=news&filter[orderby]=modified', // get all news + ord by modified date + show on hp flag
       dataType: 'json',
       success: function(posts) {
         console.log('api exec succ....');

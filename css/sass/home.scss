@@ -8,18 +8,66 @@
   position: relative;
   height: 100%;
   // background: url(/img/home/everyday-life.jpg) center center/cover no-repeat;
-  @include transition ( all 1.5s ease-in-out );
+  @include transition ( all 1s ease-in-out );
+}
+
+#wp-hp-news__txt-content{
+  width: 100;
+  height: 100%;
 }
 
 .wp-hp-badge{
   position: relative;
   height: 100%;
-  // background: url(/img/home/everyday-life.jpg) center center/cover no-repeat;
-  @include transition ( all 1.5s ease-in-out );
-  background-color:#e2e2e2;
+  background: url('../../img/home/ted-cover.jpg') center center/cover no-repeat;
+  @include transition ( all 1s ease-in-out );
 }
-#wp-hp-news__txt-content{
-  width: 100;
-  height: 100%;
 
+.wp-hp-badge__content-wrapper{
+  display: table;
+  width:100%;
+  padding-top: 70%;
+  padding-left:10%;
+  //
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: block;
+}
+
+.wp-hp-badge__content-wrapper::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.4;
+  // @include transition (opacity 0.4s $ease-in-out-quad);
+  background: #000;
+}
+
+.wp-hp-badge__what {
+  font-family: $font-roboto-condensed;
+  font-weight: 100;
+  font-style: italic;
+  // letter-spacing: 2px;
+  font-size:em(24);
+  color: #f14d21;
+}
+
+.wp-hp-badge__title{
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  line-height: 1em;
+  // letter-spacing: 2px;
+  font-size:em(44);
+  color: #fff;
+  margin-top: em(3);
 }
