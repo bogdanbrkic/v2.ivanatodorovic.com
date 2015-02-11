@@ -52,14 +52,14 @@ color:#fff;
 /*
 * list posts from cat == news (2)
 */
-$additional_loop = new WP_Query("posts_per_page=4&cat=2&paged=$paged");
+$conf_post_per_page = 4;
+$additional_loop = new WP_Query("posts_per_page=".$conf_post_per_page."&cat=2&paged=$paged");
+// print_r($additional_loop);	// debug
+/*
+ * loop array and set 1 2 3 with diff tpls
+ * count == 3 reset counter and lop again
+*/
 
-// debug
-// print_r($additional_loop);
-?>
-
-<!-- loop array and set 1 2 3 with diff tpls .. and loop .. for loop .. i count == 3 reset counter and lop again ..   -->
-<?php
 	$i = 0; // counter
 	while ($additional_loop->have_posts()) : $additional_loop->the_post();
 	$i++;
@@ -99,7 +99,7 @@ $additional_loop = new WP_Query("posts_per_page=4&cat=2&paged=$paged");
 		</div>
 
 	<?php
-		$i=0;
+		$i=0; // reset tpl counter
 		} // if i eq 3
 	?>
 
