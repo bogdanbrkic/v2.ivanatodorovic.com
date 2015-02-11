@@ -16,8 +16,8 @@
   <link rel="shortcut icon" href="/favicon.d0ff1239b656f042.ico" />
   <script src="build/js/modernizr-custom.3d293c8a8c934d03.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:100,400,700,300,300italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
-  <link href="build/css/master.adf32107d82de677.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700' rel='stylesheet' type='text/css'>
+  <link href="build/css/master.42ff2ee5c21338e8.css" rel="stylesheet">
 </head>
 
 <body>
@@ -50,7 +50,15 @@
   <!-- Content [ -->
   <div class="row hp-news">
     <div class="element-1-2 wp-hp-news">
-      <div id="wp-hp-news__txt-content" class="test"></div>
+      <div id="wp-hp-news__txt-content" class="test">
+      <!-- rest api data js -->
+      <div class="wp-hp-news__content-wrapper">
+        <h6 class="wp-hp-news__section-name">NEWS</h6>
+        <h4 class="wp-hp-news__what"></h4>
+        <h5 class="wp-hp-news__title"></h5>
+        <p class="wp-hp-news__desc"></p>
+      </div>
+      </div>
     </div>
     <div class="element-1-2 wp-hp-badge">
       <div class="wp-hp-badge__content-wrapper">
@@ -146,23 +154,24 @@
                   fg_news_showonhp_desc:  "Ivana Todorovic recently with friends in TRI space"
                   */
 
-                  var html = '';
+                  var html;
 
                   for(var i = 0, l = posts.length; i < l; ++i){
                      if(posts[i].meta.fg_news_showonhp){ // if true
                         wpHpNewsImg = posts[i].meta.fg_news_img; //global
-                        console.log('bckg-img: ' + wpHpNewsImg);
-                        html += '<div>';
-                        html += '<a href="' + posts[i].link + '"><h2>' + posts[i].meta.fg_news_showonhp_title + '</h2></a>';
-                        html += '<h3>' + posts[i].meta.fg_news_showonhp_what + '</h3>';
-                        html += '<p>'+ posts[i].meta.fg_news_showonhp_desc +'</p>';
-                        html += '</div>';
+                        wpHpNewsURL = posts[i].link;
+                        wpHpNewsURLTitle = posts[i].meta.fg_news_showonhp_title;
+                        wpHpNewsWhat = posts[i].meta.fg_news_showonhp_what;
+                        wpHpNewsDesc = posts[i].meta.fg_news_showonhp_desc;
                         break; // exit loop
                       }
                   }
 
                   $('#wp-hp-news__txt-content').append(html);
-                  $('.test').css("background", "url(wordpress/wp-content/uploads/2015/02/1.jpg) center center/cover no-repeat");
+                  $('.wp-hp-news__what').append(wpHpNewsWhat);
+                  $('.wp-hp-news__title').append(wpHpNewsURLTitle);
+                  $('.wp-hp-news__desc').append(wpHpNewsDesc);
+                  $('.test').css("background", "url("+wpHpNewsImg+") center center/cover no-repeat");
 
                 }
               });
