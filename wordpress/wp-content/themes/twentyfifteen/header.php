@@ -22,8 +22,8 @@
 	<?php wp_head(); ?>
 
 	<!--  -->
-	<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:100,400,700,300,300italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700' rel='stylesheet' type='text/css'>
 	<link href="//v2.ivanatodorovic.com:5015/build/css/master.css" rel="stylesheet">
 </head>
 

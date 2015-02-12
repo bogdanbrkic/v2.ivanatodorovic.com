@@ -22,13 +22,17 @@
   font-size: em(34);
   line-height:1.25em;
   text-transform:uppercase;
-  padding-bottom: 1.5em;
-  color: #333;
+  // padding-bottom: 1em;
+  // color: #333;
 
   @include media($mobile) {
     font-size: em(22);
   }
 
+}
+
+.news__txt-title a {
+  color: #333;
 }
 
 .news__txt-p {
