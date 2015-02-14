@@ -28,9 +28,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<!-- <div id="page" class="hfeed site"> -->
-	<!-- <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a> -->
-	<!-- <div id="content" class="site-content"> -->
 
 	<!-- Header [ -->
 	<header class="l__header">
@@ -38,13 +35,14 @@
 			<img class="element-1 logo__name " src="/img/svg/ivana-todorovic-logo-full.svg" />
 		</div>
 
+<!-- menu cur link class :: menu__item--current  -->
 		<div class="row">
 			<ul class="menu p-lr-1">
 				<li class="menu__item"><a href="index.html">HOME</a></li>
 				<li class="menu__item"><a href="#">FILMS</a></li>
 				<li class="menu__item">LECTURER</li>
 				<li class="menu__item">BIO</li>
-				<li class="menu__item menu__item--current">NEWS</li>
+				<li class="menu__item">NEWS</li>
 				<li class="menu__item">PRESS</li>
 				<li class="menu__item">FRIENDS</li>
 				<li class="menu__item">CONTACT</li>

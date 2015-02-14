@@ -11,7 +11,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class_oddeven(); ?> >
-	<div class="news news__item">
 	<?php
 		// Post thumbnail.
 		twentyfifteen_post_thumbnail();
@@ -53,22 +52,9 @@
 		endif;
 	?>
 
-	<!-- AFC ield value -->
-	<img src="<?php the_field('fg_news_img'); ?>" />
-	<h2><?php the_field('FG_1_title'); ?></h2>
-	<div><?php the_field('FG_1_content'); ?></div>
-
-
-	<!-- CF_video : render custom field value -->
-	<?php echo get_post_meta($post->ID, "CF_video", true); ?>
-</div>
-
-<div><< BACK to all news</div>
-
 	<footer class="entry-footer">
 		<? //php twentyfifteen_entry_meta(); ?>
 		<? //php edit_post_link( __( 'Edit', 'twentyfifteen' ), '<span class="edit-link">', '</span>' ); ?>
-		<div class="news__item"><div class="news__spacer">&nbsp;</div></div>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
