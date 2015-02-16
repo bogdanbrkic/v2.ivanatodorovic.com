@@ -24,9 +24,11 @@
     padding-bottom: em(15);
 }
 
-.menu__item{
+.menu__item,
+.menu-item {
   float: left;
   margin-right:1.125em;
+  text-transform: uppercase;
 
   @include media($mobile) {
     margin-right:0.55em;
@@ -34,6 +36,11 @@
 
 }
 
-.menu__item--current{
+.menu__item--current,
+.current-menu-item > a {
   color: $orange;
+}
+
+.sub-menu {
+  display:none;
 }

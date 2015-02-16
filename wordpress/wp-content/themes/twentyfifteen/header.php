@@ -35,7 +35,7 @@
 			<img class="element-1 logo__name " src="/img/svg/ivana-todorovic-logo-full.svg" />
 		</div>
 
-<!-- menu cur link class :: menu__item--current  -->
+<!-- menu cur link class :: menu__item--current
 		<div class="row">
 			<ul class="menu p-lr-1">
 				<li class="menu__item"><a href="index.html">HOME</a></li>
@@ -49,5 +49,29 @@
 			</ul>
 		</div>
 
-	</header>
+	</header>  -->
 	<!--] Header -->
+	<div class="row">
+	<?php
+
+		$menu_arr = array(
+			'theme_location'  => '',
+			'menu'            => '',
+			'container'       => 'nav',
+			'container_class' => '',
+			'container_id'    => '',
+			'menu_class'      => 'menu',
+			'menu_id'         => '',
+			'echo'            => true,
+			'fallback_cb'     => 'wp_page_menu',
+			'before'          => '',
+			'after'           => '',
+			'link_before'     => '',
+			'link_after'      => '',
+			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			'depth'           => 0,
+			'walker'          => ''
+		);
+
+	wp_nav_menu( $menu_arr ); ?>
+	</div>
