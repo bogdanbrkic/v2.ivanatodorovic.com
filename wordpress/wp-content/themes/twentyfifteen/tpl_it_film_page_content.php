@@ -1,11 +1,5 @@
 <?php /* Template name: IT Film page Template */ ?>
 
-<?php
-//debug
-define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_DISPLAY', true );
- ?>
-
 <!-- header -->
 <?php get_header(); ?>
 
