@@ -12,7 +12,7 @@
 
 <!-- Footer [ -->
 <footer class="l__footer">
-	<div class="l__footer--container ">© 2014. All rights reserved.</div>
+	<div class="l__footer--container ">© 2015. All rights reserved.</div>
 </footer>
 <!-- ] Footer -->
 
