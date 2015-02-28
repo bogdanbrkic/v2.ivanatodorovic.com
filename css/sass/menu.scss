@@ -1,6 +1,7 @@
 /* block grid */
 
 .menu {
+  position: relative;
   padding-top: em(40);
   @include outer-container;
   font-family: $menu-font-family;
@@ -44,4 +45,27 @@
 
 .sub-menu {
   display:none;
+}
+
+#menu-item-134:hover .sub-menu{
+  background: red;
+  display: block;
+}
+
+.sub-menu {
+  // display:none;
+  background: green;
+  position:absolute;
+  left: 0px;
+  width:100%;
+
+  .menu-item{
+    width: 25%;
+    margin-right:0em;
+  }
+
+  .menu-item a {
+    font-family: $menu-font-family;
+    font-size: rem(12);
+  }
 }
