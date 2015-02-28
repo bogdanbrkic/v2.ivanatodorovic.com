@@ -4,7 +4,10 @@ a {
   color: $orange;
 }
 
-a:hover {}
+a:hover {
+  color:#F63;
+  text-decoration: underline;
+}
 
 h1 {
   //line-height: 1em;
