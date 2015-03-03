@@ -32,7 +32,7 @@
 	<!-- Header [ -->
 	<header class="l__header">
 		<div class="row p-top logo p-lr-1">
-			<img class="element-1 logo__name " src="/img/svg/ivana-todorovic-logo-full.svg" />
+			<a href="/" title="ivana todorovic home page"><img class="element-1 logo__name " src="/img/svg/ivana-todorovic-logo-full.svg" /></a>
 		</div>
 
 		<div class="row">
