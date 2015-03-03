@@ -14,10 +14,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link rel="shortcut icon" href="/favicon.d0ff1239b656f042.ico" />
-  <script src="build/js/modernizr-custom.3d293c8a8c934d03.js"></script>
+  <script src="build/js/modernizr-custom.ca5691937abbc686.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:100,400,700,300,300italic,700italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700' rel='stylesheet' type='text/css'>
-  <link href="build/css/master.288fd66633d77fd8.css" rel="stylesheet">
+  <link href="build/css/master.3cc7ca6a5f5f4f1e.css" rel="stylesheet">
 </head>
 
 <body>
@@ -77,7 +77,7 @@
         Belgarde, Serbia. Her films have been shown in more then 80 international film festivals, such as the Berlinale Shorts, Traverse City Festival, Rotterdam, Palm Springs Shorts, Rooftop etc. and wone acclaim worldwide.
         Films are used in media campaigns, educational and NGO settings.
       </p>
-      <a class="orange" href="#">Read more <span>&#187;</span></a>
+      <a class="orange" href="/biography" title="about Ivana Todorovic">Read more <span>&#187;</span></a>
     </div>
   </div>
 
@@ -135,14 +135,14 @@
           <script src="bower_components/jquery/dist/jquery.min.d021c983bd6e7291.js"></script>
           <script>
           jQuery(document).ready(function($) {
-              console.log('api in.....');
+              console.log('WP api in.....');
               $.ajax({
                 type: 'GET',
                 cache: true,
                 // get all news + ord by modified date + show on hp flag
                 url: 'http://v2.ivanatodorovic.com:5015/wp-json/posts?filter[category_name]=news&filter[orderby]=modified',
                 dataType: 'json',
-                success: function(posts) {  // @TODO split in Fn()....
+                success: function(posts) {  // @TODO split&move into module in Fn()....
                   console.log('api exec succ....');
                   // console.log(posts);
 
@@ -179,7 +179,7 @@
           </script>
           <script>
           //fitVids
-          $(".video").fitVids(); // @TODO move in grunt uglfy
+          $(".video").fitVids(); // @TODO move in grunt
 
           // Google Analytics: change UA-XXXXX-X to be your site's ID
           (function(b, o, i, l, e, r) {

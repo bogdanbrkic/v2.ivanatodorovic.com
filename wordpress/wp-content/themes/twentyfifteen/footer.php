@@ -18,5 +18,16 @@
 
 <?php wp_footer(); ?>
 
+
+<!-- custom -->
+
+<!-- bottom script -->
+<script src="build/js/base.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+//fitVids
+$(".video").fitVids(); // @TODO move in grunt uglfy
+<!--  -->
+
 </body>
 </html>

@@ -1,13 +1,13 @@
 <?php
 /**
- * The template for displaying the header
- *
- * Displays all of the head element and everything up until the "site-content" div.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
+* The template for displaying the header
+*
+* Displays all of the head element and everything up until the "site-content" div.
+*
+* @package WordPress
+* @subpackage Twenty_Fifteen
+* @since Twenty Fifteen 1.0
+*/
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -35,43 +35,29 @@
 			<img class="element-1 logo__name " src="/img/svg/ivana-todorovic-logo-full.svg" />
 		</div>
 
-<!-- menu cur link class :: menu__item--current
 		<div class="row">
-			<ul class="menu p-lr-1">
-				<li class="menu__item"><a href="index.html">HOME</a></li>
-				<li class="menu__item"><a href="#">FILMS</a></li>
-				<li class="menu__item">LECTURER</li>
-				<li class="menu__item">BIO</li>
-				<li class="menu__item">NEWS</li>
-				<li class="menu__item">PRESS</li>
-				<li class="menu__item">FRIENDS</li>
-				<li class="menu__item">CONTACT</li>
-			</ul>
+			<?php
+
+			$menu_arr = array(
+				'theme_location'  => '',
+				'menu'            => '',
+				'container'       => 'nav',
+				'container_class' => '',
+				'container_id'    => '',
+				'menu_class'      => 'menu',
+				'menu_id'         => '',
+				'echo'            => true,
+				'fallback_cb'     => 'wp_page_menu',
+				'before'          => '',
+				'after'           => '',
+				'link_before'     => '',
+				'link_after'      => '',
+				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'depth'           => 0,
+				'walker'          => ''
+			);
+
+			wp_nav_menu( $menu_arr ); ?>
 		</div>
-
-	</header>  -->
+	</header>
 	<!--] Header -->
-	<div class="row">
-	<?php
-
-		$menu_arr = array(
-			'theme_location'  => '',
-			'menu'            => '',
-			'container'       => 'nav',
-			'container_class' => '',
-			'container_id'    => '',
-			'menu_class'      => 'menu',
-			'menu_id'         => '',
-			'echo'            => true,
-			'fallback_cb'     => 'wp_page_menu',
-			'before'          => '',
-			'after'           => '',
-			'link_before'     => '',
-			'link_after'      => '',
-			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			'depth'           => 0,
-			'walker'          => ''
-		);
-
-	wp_nav_menu( $menu_arr ); ?>
-	</div>
