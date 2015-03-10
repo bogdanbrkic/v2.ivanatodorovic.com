@@ -188,9 +188,9 @@ module.exports = function(grunt) {
   });
 
   //run all
-  grunt.registerTask('all', ['modernizr', 'buildjs', 'buildcss', 'imageoptim' , 'cacheBust']);
+  grunt.registerTask('all', ['modernizr', 'buildjs', 'buildcss', 'imageoptim']);
   //run small tasks:
-  grunt.registerTask('buildsass', ['buildcss', 'cacheBust']);
+  grunt.registerTask('buildsass', ['buildcss']);
   grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
   grunt.registerTask('buildjs',   ['concat', 'uglify']);
   grunt.registerTask('buildimgs', ['imageoptim']);
