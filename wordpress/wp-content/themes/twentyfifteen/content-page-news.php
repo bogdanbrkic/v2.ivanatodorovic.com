@@ -35,7 +35,7 @@ if ($i == 1) {
 	?>
 	<div class="news news__item">
 		<div class="col-1 news__img">
-			<?php the_post_thumbnail( array( 970, 540), array( 'class' => '' ), $crop = TRUE ) ?>
+			<?php the_post_thumbnail( array( 970, 9999), array( 'class' => '' ), $crop = TRUE ) // 9999 = wp auto height ?>
 		</div>
 		<div class="col-1 news__txt p-lr-1">
 			<h3 class="news__txt-title"><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h3>
