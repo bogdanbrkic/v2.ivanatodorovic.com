@@ -27,16 +27,20 @@
 
 //main menu js
 $("li.film-1").on('click', function(){
-	window.location = "/films/when-i-was-a-boy-i-was-a-girl";    
+	window.location = "/films/when-i-was-a-boy-i-was-a-girl";
 });
 $("li.film-2").on('click', function(){
-	window.location = "/films/a-harlem-mother";    
+	window.location = "/films/a-harlem-mother";
 });
 $("li.film-3").on('click', function(){
-	window.location = "/films/everyday-life-of-roma-children-from-block-71";    
+	window.location = "/films/everyday-life-of-roma-children-from-block-71";
 });
 $("li.film-4").on('click', function(){
-	window.location = "/rapresent";    
+	window.location = "/rapresent";
+});
+//
+$("#hp-badge").on('click', function(){
+	window.location = "/lecturer/#tedx";
 });
 
 </script>

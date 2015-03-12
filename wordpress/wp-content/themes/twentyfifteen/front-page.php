@@ -14,7 +14,7 @@
     </div>
     </div>
   </div>
-  <div class="element-1-2 wp-hp-badge">
+  <div id="hp-badge" class="element-1-2 wp-hp-badge">
     <div class="wp-hp-badge__content-wrapper">
       <h4 class="wp-hp-badge__what">TEDxAUK talk</h4>
       <h5 class="wp-hp-badge__title"><a href="/lecturer/#tedx">DOCUMENTARY FILMMAKER</a></h5>
