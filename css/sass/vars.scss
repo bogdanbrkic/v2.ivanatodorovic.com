@@ -1,7 +1,8 @@
-//vars// Define your breakpoints//$desktop: new-breakpoint(max-width 64em);//$tablet: new-breakpoint(max-width 48em);// $mobile: new-breakpoint(max-width 35.5em);// $tablet: new-breakpoint(min-width 35.55em) and (max-width 60em);//colors$orange: #ff6633;//font$font-roboto-condensed: "Roboto Condensed";$font-roboto: "Roboto";$h-font-family: "Roboto Condensed";$menu-font-family: "Roboto Condensed";$body-font-family: "Roboto";//film-cover$film-cover-everyday-life: "/img/home/everyday-life.jpg";
-$film-cover-harlem: "/img/home/harlem.jpg";
-$film-cover-represent: "/img/home/represent.jpg";
-$film-cover-when-i-was-boy: "/img/home/when-i-was-boy.jpg";
+//vars// Define your breakpoints//$desktop: new-breakpoint(max-width 64em);//$tablet: new-breakpoint(max-width 48em);// $mobile: new-breakpoint(max-width 35.5em);// $tablet: new-breakpoint(min-width 35.55em) and (max-width 60em);//colors$orange: #ff6633;//font$font-roboto-condensed: "Roboto Condensed";$font-roboto: "Roboto";$h-font-family: "Roboto Condensed";$menu-font-family: "Roboto Condensed";$body-font-family: "Roboto";//film-cover$film-cover-everyday-life: "/img/home/covers/roma-children.jpg";
+$film-cover-harlem: "/img/home/covers/harlem-mother.jpg";
+$film-cover-represent: "/img/home/covers/rapresent.jpg";
+$film-cover-when-i-was-boy: "/img/home/covers/when-I-was.jpg";
+
 $padding-content: em(88) 0 0 em(48);
 
 //nav

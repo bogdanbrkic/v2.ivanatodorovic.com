@@ -21,7 +21,7 @@
   <script>(function(){document.documentElement.className='js'})();</script>
   <?php wp_head(); ?>
 
-  <!--  -->
+  <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:100,400,700,300,300italic,700italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700' rel='stylesheet' type='text/css'>
   <link href="/build/css/master.css" rel="stylesheet">

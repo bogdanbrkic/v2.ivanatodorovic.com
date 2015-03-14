@@ -1,9 +1,8 @@
-<!-- header -->
 <?php get_header(); ?>
 
 <!-- Content [ -->
 <div class="row hp-news">
-  <div class="element-1-2 wp-hp-news">
+  <div id="hp-news" class="element-1-2 wp-hp-news">
     <div id="wp-hp-news__txt-content" class="test">
       <!-- rest api data js -->
       <div class="wp-hp-news__content-wrapper">
@@ -16,22 +15,24 @@
   </div>
   <div id="hp-badge" class="element-1-2 wp-hp-badge">
     <div class="wp-hp-badge__content-wrapper">
-      <h4 class="wp-hp-badge__what">TEDxAUK talk</h4>
-      <h5 class="wp-hp-badge__title"><a href="/lecturer/#tedx">DOCUMENTARY FILMMAKER</a></h5>
+      <h4 class="wp-hp-badge__what">DOCUMENTARY FILMMAKER</h4>
+      <h5 class="wp-hp-badge__title"><a href="/lecturer/#tedx">TEDxAUK talk</a></h5>
       <p></p>
     </div>
   </div>
 </div>
 
+<!-- hp quote  -->
 <div class="row">
-  <div class="intro-text p-lr-1">
-    <h1>ABOUT</h1>
-    <h2>DIRECTOR / DP / PRODUCER & LECTURER</h2>
-    <p>Ivana Todorovic is a character driven documentary filmmaker with passion for social change from
-      Belgarde, Serbia. Her films have been shown in more then 80 international film festivals, such as the Berlinale Shorts, Traverse City Festival, Rotterdam, Palm Springs Shorts, Rooftop etc. and wone acclaim worldwide.
-      Films are used in media campaigns, educational and NGO settings.
-    </p>
-    <a class="orange" href="/biography" title="about Ivana Todorovic">Read more <span>&#187;</span></a>
+    <div class="quote-wrapper">
+    <q class="quote">These are the films that we need
+   in order to get closer to people
+  who are so far from us</q>
+  <div class="dash-container">
+        <div class="dash dash-center"></div>
+  </div>
+  <p class="quote-below-txt">Maike Mia Horhe / Curator of Berlinare Shorts</br>
+  (When I was boy, I was a girl)</p>
   </div>
 </div>
 
@@ -82,6 +83,19 @@
         </div></a>
       </div>
 
+      <!-- about  -->
+      <div class="row">
+        <div class="intro-text p-lr-1">
+          <h1 class="margin-top-2">ABOUT</h1>
+          <h2>DIRECTOR / DP / PRODUCER & LECTURER</h2>
+          <p>Ivana Todorovic is a character driven documentary filmmaker with passion for social change from
+            Belgarde, Serbia. Her films have been shown in more then 80 international film festivals, such as the Berlinale Shorts, Traverse City Festival, Rotterdam, Palm Springs Shorts, Rooftop etc. and wone acclaim worldwide.
+            Films are used in media campaigns, educational and NGO settings.
+          </p>
+          <a class="orange" href="/biography" title="about Ivana Todorovic">Read more <span>&#187;</span></a>
+        </div>
+      </div>
+
     </div>
     <!-- ] Content -->
 
@@ -92,7 +106,7 @@
         type: 'GET',
         cache: true,
         // get all news + ord by modified date + show on hp flag
-        url: 'http://ivanatodorovic.com/wp-json/posts?filter[category_name]=news&filter[orderby]=modified',
+        url: 'http://ivanatodorovic.com:5015/wp-json/posts?filter[category_name]=news&filter[orderby]=modified',
         dataType: 'json',
         success: function(posts) {  // @TODO split in Fn()....
           console.log('wp api exec succ....');
@@ -130,5 +144,4 @@
     });
     </script>
 
-    <!-- footer -->
     <?php get_footer(); ?>

@@ -38,9 +38,13 @@ $("li.film-3").on('click', function(){
 $("li.film-4").on('click', function(){
 	window.location = "/rapresent";
 });
-//
+
+// promoted 1&2
 $("#hp-badge").on('click', function(){
 	window.location = "/lecturer/#tedx";
+});
+$("#hp-news").on('click', function(){
+	window.location = "/news";
 });
 
 </script>
